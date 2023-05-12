@@ -1,0 +1,134 @@
+---
+format: html
+---
+
+
+## io-biodiversity 
+
+<https://planetarycomputer.microsoft.com/dataset/io-biodiversity>
+
+- optimized cloud source? Yes (STAC + COG + cloud host)
+- public access? Yes
+- License: CC-BY
+
+## IUCN Range maps / Redlist categories
+
+ - From: <https://www.iucnredlist.org/resources/spatial-data-download>
+ - `MAMMALS.zip` ESRI shapefile, 2023-05-02
+ - `REPTILES.zip` ESRI shapefile, 2023-05-02
+ - `AMPHIBIANS.zip` ESRI shapefile 2023-05-02
+ - `PLANTS.zip` ESRI shapefile, 2023-05-02
+ - `REEF_FORMING_CORALS.zip` ESRI shapefile, 2023-05-02
+ - `WRASSES_PARROTFISHES.zip` ESRI shapefile, 2023-05-02
+ - 
+
+
+IUCN Aves data comes from Birds of the World, through a separate request process.
+
+- `birds/BOTW.gdb` ESRI GDB database file, 2023-05-11
+
+
+## Carbon
+
+  - paper: <https://doi.org/10.1038/s41893-021-00803-6>
+  - download: <https://doi.org/10.5281/zenodo.4091028>
+  - web: <https://irrecoverable.resilienceatlas.org/map>
+
+Data mirror: cloud-optimized geotif
+
+  - `carbon/Irrecoverable_Carbon_2010/`
+    - `Irrecoverable_C_Biomass_2010.tif`
+    - `Irrecoverable_C_Soil_2010.tif`
+    - `Irrecoverable_C_Total_2010.tif`
+    
+and corresponding same three COG files for:
+
+  - `carbon/Irrecoverable_Carbon_2018/`
+  - `carbon/Manageable_Carbon_2010/`
+  - `carbon/Manageable_Carbon_2018/`
+  - `carbon/Vulnerable_Carbon_2010/`
+  - `carbon/Vulnerable_Carbon_2018/`
+
+## Global Mangrove Watch
+
+- https://datadownload-production.s3.amazonaws.com/GMW_v3_2015.zip
+(or in S3 notation:)
+- s3://datadownload-production/GMW_v3_2015.zip
+
+likewise:
+
+- GMW_v3_2016.zip
+- GMW_v3_2017.zip
+- GMW_v3_2019.zip
+- GMW_v3_2020.zip
+
+(note 2018 is missing)
+
+Localized copies on `biodiversity` bucket
+
+## World Protected Areas
+
+Source site: <https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA>
+license: non-commercial <https://www.protectedplanet.net/en/legal>
+human-mediated request required: No
+
+- `World-Protected-Areas-May2023.gdb`
+
+## Key Biodiversity Areas (KBAs)
+
+- 
+
+## EcoRegions
+
+Resolve 2017 EcoRegions data
+- Web App <https://ecoregions2017.appspot.com/> 
+- Earth Engine entry: <https://developers.google.com/earth-engine/datasets/catalog/RESOLVE_ECOREGIONS_2017>
+
+Local snapshot:
+
+# Global Priority Areas
+
+- Data probably from Jung et al (2021) <https://doi.org/10.1038/s41559-021-01528-7>
+(and related, <https://doi.org/10.1038/s41586-020-2784-9>)
+
+Downloaded from: <https://doi.org/10.5281/zenodo.6622029>, descriptionless upload used by `https://github.com/prioritizr/aoh` and `https://github.com/prioritizr/prioritizr`
+
+
+
+---- 
+
+# Non-spatially explicit formats
+
+## PREDICTS
+
+ - ref:
+
+## BioTIME
+
+- 
+
+## LPI
+
+- 
+ 
+## GBIF
+
+- 
+
+## eBird
+
+
+--------
+
+Relevant abiotic environment / climate layers:
+
+# Fire
+
+- CalFire polygons 
+- MODIS
+
+
+# MODIS
+
+- Green biomass metrics, LAI, NDVI, ...
+
