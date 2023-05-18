@@ -74,6 +74,8 @@ human-mediated request required: No
 
 - `World-Protected-Areas-May2023.gdb`
 
+maybe also WDOECMs (https://www.protectedplanet.net/en/thematic-areas/oecms?tab=OECMs)
+
 ## Key Biodiversity Areas (KBAs)
 
 - 
@@ -92,7 +94,6 @@ Local snapshot:
 (and related, <https://doi.org/10.1038/s41586-020-2784-9>)
 
 Downloaded from: <https://doi.org/10.5281/zenodo.6622029>, descriptionless upload used by `https://github.com/prioritizr/aoh` and `https://github.com/prioritizr/prioritizr`
-
 
 
 ---- 
@@ -118,6 +119,8 @@ Downloaded from: <https://doi.org/10.5281/zenodo.6622029>, descriptionless uploa
 ## eBird
 
 
+## MoveBank
+
 --------
 
 Relevant abiotic environment / climate layers:
@@ -131,4 +134,14 @@ Relevant abiotic environment / climate layers:
 # MODIS
 
 - Green biomass metrics, LAI, NDVI, ...
+
+# Global forest watch?
+
+# Land cover
+
+- European Space Agency Climate Change Initiative (ESA CCI) land use and cover maps?
+- Potential land cover maps (for restoration potential, maybe similar to Strassburg et al?)
+- 
+---------
+
 
