@@ -1,0 +1,24 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+on: [push]
+
+name: docker
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    env: 
+      HELLO_CARL: "It is working!"
+    container: rocker/verse
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: |
+          print(Sys.getenv("HELLO_CARL"))
+        shell: Rscript {0}
+
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: report.html
