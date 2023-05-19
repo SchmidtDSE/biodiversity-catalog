@@ -8,7 +8,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     env: 
-      HELLO_CARL: "It is working!"
+      HELLO_CARL: ${{ secrets.TEST_SECRET }}
     container: rocker/verse
     steps:
       - uses: actions/checkout@v3
