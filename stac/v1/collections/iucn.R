@@ -22,6 +22,12 @@ collection <- list(
       "href"= "iucn.json"
     ),
     list(
+      "rel"= "license",
+      "href"= "https://www.iucn.org/terms-and-conditions",
+      "type"= "text/html",
+      "title"= "License"
+    ),
+    list(
       "rel"= "about",
       "href"= "https://www.iucnredlist.org/",
       "type"= "text/html",

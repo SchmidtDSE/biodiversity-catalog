@@ -19,18 +19,24 @@ collection <- list(
     list(
       "rel"= "self",
       "type"= "application/json",
-      "href"= "iucn.json"
+      "href"= "WPAs.json"
+    ),
+    list(
+      "rel"= "license",
+      "href"= "https://www.protectedplanet.net/en/legal",
+      "type"= "text/html",
+      "title"= "License"
     ),
     list(
       "rel"= "about",
-      "href"= "https://www.protectedplanet.net/en",
+      "href"= "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=About",
       "type"= "text/html",
       "title"= "World Protected Areas"
     ),
     list(
       "rel"= "describedby",
-      "href"= "https://www.protectedplanet.net/en",
-      "title"= "Protected Planet",
+      "href"= "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=Methodology",
+      "title"= "World Protected Areas",
       "type"= "text/html"
     )
   ),
@@ -42,7 +48,7 @@ collection <- list(
       "roles"= list(
         "thumbnail"
       ),
-      "title"= "Conservation International Carbon map"
+      "title"= "World Protected Areas"
     )
   ),
   "extent"= list(
@@ -63,7 +69,7 @@ collection <- list(
         ))
     )
   ),
-  "license"= "CC-BY-NC",
+  "license"= "proprietary",
   "keywords"= list(
     "Protected Areas",
     "Polygons",
@@ -72,7 +78,7 @@ collection <- list(
   "providers"= list(
     list(
       "url"= "https://www.protectedplanet.net/en/about",
-      "name"= "Protected Planent (R)",
+      "name"= "Protected Planet",
       "roles"= list(
         "processor", "licensor"
       )
@@ -87,27 +93,19 @@ collection <- list(
       )
     )
   ),
-  "description"= "The IUCN Red List of Threatened Species™ contains global assessments for more than 150,300 species. More than 82% of these (>123,600 species) have spatial data.
-
-The spatial data provided below are mostly for comprehensively assessed taxonomic groups and selected freshwater groups. It is important to note that some species (such as those listed as Data Deficient) are not mapped and subspecies, varieties and subpopulations are mapped within the parent species.
-
-The data are made available in three formats, including taxonomic information, distribution status, IUCN Red List Category, sources and other details about the maps (see metadata document). Most species will have either polygons or points, only some have both",
+  "description"= "The World Database on Protected Areas (WDPA) is the most comprehensive global database of marine and terrestrial protected areas. It is a joint project between UN Environment Programme and the International Union for Conservation of Nature (IUCN), and is managed by UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC), in collaboration with governments, non-governmental organisations, academia and industry.The WDPA is updated on a monthly basis",
   "stac_version"= "1.0.0",
   
   "stac_extensions"= list(
     "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
     "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json"
-  ),
-  "publications"= list(
-    "doi"= "https://doi.org/10.1038/s41893-021-00803-6",
-    "citation"= "Noon, M.L., Goldstein, A., Ledezma, J.C. et al. Mapping the irrecoverable carbon in Earth’s ecosystems. Nat Sustain 5, 37–46 (2022). https://doi.org/10.1038/s41893-021-00803-6"
-)
+  )
 )
 
 
 
-path <- file.path("stac/v1/collections/", "iucn.json")
+path <- file.path("stac/v1/collections/", "WPAs.json")
 jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE)
 stac4cast::stac_validate(path)
 

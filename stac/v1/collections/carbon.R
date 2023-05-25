@@ -19,7 +19,13 @@ collection <- list(
     list(
       "rel"= "self",
       "type"= "application/json",
-      "href"= "iucn.json"
+      "href"= "carbon.json"
+    ),
+    list(
+      "rel"= "license",
+      "href"= "https://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "type"= "text/html",
+      "title"= "License"
     ),
     list(
       "rel"= "about",
@@ -94,21 +100,16 @@ collection <- list(
       )
     )
   ),
-  "description"= "To avoid the catastrophic consequences of climate breakdown, there are certain places that humanity simply cannot afford to destroy. These ecosystems contain more than 139 billion metric tons of “irrecoverable carbon,” most of which is stored in mangroves, peatlands, old-growth forests and marshes.
-
-Conservational International scientists led a team of globally renowned experts to determine where these carbon stocks are, whether they are threatened by human activities and how quickly the stocks could be recovered if lost — creating a global map of irrecoverable carbon in Earth’s ecosystems.
-
-Informed by this pioneering research, Conservation International is undertaking an ambitious initiative to protect 4 million square kilometers (more than 1.5 million square miles) of ecosystems — an area about the size of India and Bolivia combined — containing high amounts of irrecoverable carbon and biodiversity.",
-  "stac_version"= "1.0.0",
-  
-  "stac_extensions"= list(
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
-  ),
+  "description"= "These datasets provide global maps of carbon density (aboveground, belowground biomass carbon and soil organic carbon stocks) for the year 2010 and 2018 at ~300-m spatial resolution in Mg ha-1 (Coordinate System: WGS 1984, float format). Input maps were collected from published literature, and where necessary, updated to cover the focal time period. These updates were applied to the manageable carbon, vulnerable carbon and irrecoverable carbon maps. Manageable carbon is carbon in terrestrial and coastal ecosystems that could experience an anthropogenic land-use conversion event . Vulnerable carbon is the carbon that would be that would be released in a typical land-use conversion. Irrecoverable carbon is  the carbon that, if lost, would not recover by mid-century.  Datasets are disaggregated for carbon density in biomass or soils.",
   "publications"= list(
     "doi"= "https://doi.org/10.1038/s41893-021-00803-6",
     "citation"= "Noon, M.L., Goldstein, A., Ledezma, J.C. et al. Mapping the irrecoverable carbon in Earth’s ecosystems. Nat Sustain 5, 37–46 (2022). https://doi.org/10.1038/s41893-021-00803-6"
+),
+"stac_version"= "1.0.0",
+"stac_extensions"= list(
+  "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/table/v1.2.0/schema.json"
 )
 )
 
