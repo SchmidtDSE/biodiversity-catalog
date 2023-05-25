@@ -8,7 +8,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     env: 
-      HELLO_CARL: ${{ secrets.TEST_SECRET }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
     container: rocker/ml-verse
     steps:
       - uses: actions/checkout@v3
