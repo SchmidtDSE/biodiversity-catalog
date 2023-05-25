@@ -1,5 +1,5 @@
 {
-  "id": "carbon",
+  "id": "iucn",
   "type": "Collection",
   "links": [
     {
@@ -18,27 +18,33 @@
       "href": "iucn.json"
     },
     {
-      "rel": "about",
-      "href": "https://irrecoverable.resilienceatlas.org/map",
+      "rel": "license",
+      "href": "https://www.iucn.org/terms-and-conditions",
       "type": "text/html",
-      "title": "Irrecoverable Carbon Resilience Atlas"
+      "title": "License"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.iucnredlist.org/",
+      "type": "text/html",
+      "title": "IUCN Redlist"
     },
     {
       "rel": "describedby",
-      "href": "https://www.conservation.org/projects/irrecoverable-carbon",
-      "title": "Conservation International Irrecoverable Carbon",
+      "href": "https://www.iucnredlist.org/resources/spatial-data-download",
+      "title": "IUCN Spatial Data",
       "type": "text/html"
     }
   ],
-  "title": "Irrecoverable Carbon - Conservation International",
+  "title": "IUCN Range Maps",
   "assets": {
     "thumbnail": {
-      "href": "carbon.png",
+      "href": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/IUCN_Red_List.svg/1280px-IUCN_Red_List.svg.png",
       "type": "image/png",
       "roles": [
         "thumbnail"
       ],
-      "title": "Conservation International Carbon map"
+      "title": "IUCN Redlist"
     }
   },
   "extent": {
@@ -61,26 +67,19 @@
       ]
     }
   },
-  "license": "CC-BY-NC",
+  "license": "proprietary",
   "keywords": [
-    "Carbon",
+    "Biodiversity",
     "Data",
-    "Climate"
+    "Ecology"
   ],
   "providers": [
     {
-      "url": "https://doi.org/10.5281/zenodo.4091028",
-      "name": "Zenodo Archive",
+      "url": "https://www.iucnredlist.org/",
+      "name": "IUCN Redlist",
       "roles": [
-        "host"
-      ]
-    },
-    {
-      "url": "https://irrecoverable.resilienceatlas.org/map",
-      "name": "Resilience Atlas",
-      "roles": [
-        "processor",
-        "host"
+        "producer",
+        "licensor"
       ]
     },
     {
@@ -93,14 +92,5 @@
     }
   ],
   "description": "The IUCN Red List of Threatened Species™ contains global assessments for more than 150,300 species. More than 82% of these (>123,600 species) have spatial data.\n\nThe spatial data provided below are mostly for comprehensively assessed taxonomic groups and selected freshwater groups. It is important to note that some species (such as those listed as Data Deficient) are not mapped and subspecies, varieties and subpopulations are mapped within the parent species.\n\nThe data are made available in three formats, including taxonomic information, distribution status, IUCN Red List Category, sources and other details about the maps (see metadata document). Most species will have either polygons or points, only some have both",
-  "stac_version": "1.0.0",
-  "stac_extensions": [
-    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
-  ],
-  "publications": {
-    "doi": "https://doi.org/10.1038/s41893-021-00803-6",
-    "citation": "Noon, M.L., Goldstein, A., Ledezma, J.C. et al. Mapping the irrecoverable carbon in Earth’s ecosystems. Nat Sustain 5, 37–46 (2022). https://doi.org/10.1038/s41893-021-00803-6"
-  }
+  "stac_version": "1.0.0"
 }
