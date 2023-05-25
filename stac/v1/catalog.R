@@ -65,13 +65,19 @@ catalog <- list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "IO Biodiversity Intactness Index",
-      "href"= "collections/io-biodiversity.json"
+      "href"= "https://planetarycomputer.microsoft.com/api/stac/v1/collections/io-biodiversity"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "Global Biodiversity Information Facility",
-      "href"= "collections/gbif.json"
+      "href"= "https://planetarycomputer.microsoft.com/api/stac/v1/collections/gbif"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
+      "title"= "MoBI: Map of Biodiversity Importance",
+      "href"= "https://planetarycomputer.microsoft.com/api/stac/v1/collections/mobi"
     )
   )
 )
