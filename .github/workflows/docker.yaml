@@ -9,16 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       HELLO_CARL: ${{ secrets.TEST_SECRET }}
-    container: rocker/verse
+    container: rocker/ml-verse
     steps:
       - uses: actions/checkout@v3
-
-      - run: |
-          print(Sys.getenv("HELLO_CARL"))
+      
+      - name: install
         shell: Rscript {0}
+        run: |
+          remotes::install_github("eco4cast/stac4cast", dependencies=TRUE)
+          
+      - name: validate
+        shell: Rscript {0}
+        run: |
+          stac4cast::stac_validate("stac/v1/catalog.json")
 
-      - name: Upload results
-        uses: actions/upload-artifact@v3
-        with:
-          name: results
-          path: report.html
