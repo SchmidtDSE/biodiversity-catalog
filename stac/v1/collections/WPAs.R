@@ -3,7 +3,7 @@ library(stac4cast)
 library(jsonlite)
 
 collection <- list(
-  "id"= "iucn",
+  "id"= "WPAs",
   "type"= "Collection",
   "links"= list(
      list(
@@ -23,26 +23,26 @@ collection <- list(
     ),
     list(
       "rel"= "about",
-      "href"= "https://www.iucnredlist.org/",
+      "href"= "https://www.protectedplanet.net/en",
       "type"= "text/html",
-      "title"= "IUCN Redlist"
+      "title"= "World Protected Areas"
     ),
     list(
       "rel"= "describedby",
-      "href"= "https://www.iucnredlist.org/resources/spatial-data-download",
-      "title"= "IUCN Spatial Data",
+      "href"= "https://www.protectedplanet.net/en",
+      "title"= "Protected Planet",
       "type"= "text/html"
     )
   ),
-  "title"= "IUCN Range Maps",
+  "title"= "World Protected Areas",
   "assets"= list(
     "thumbnail"= list(
-      "href"= "https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/IUCN_Red_List.svg/1280px-IUCN_Red_List.svg.png",
+      "href"= "WPAs.png",
       "type"= "image/png",
       "roles"= list(
         "thumbnail"
       ),
-      "title"= "IUCN Redlist"
+      "title"= "Conservation International Carbon map"
     )
   ),
   "extent"= list(
@@ -63,21 +63,21 @@ collection <- list(
         ))
     )
   ),
-  "license"= "proprietary",
+  "license"= "CC-BY-NC",
   "keywords"= list(
-    "Biodiversity",
-    "Data",
-    "Ecology"
+    "Protected Areas",
+    "Polygons",
+    "Biodiversity"
   ),
   "providers"= list(
     list(
-      "url"= "https://www.iucnredlist.org/",
-      "name"= "IUCN Redlist",
+      "url"= "https://www.protectedplanet.net/en/about",
+      "name"= "Protected Planent (R)",
       "roles"= list(
-        "producer",
-        "licensor"
+        "processor", "licensor"
       )
     ),
+   
     list(
       "url"= "https://dse.berkeley.edu",
       "name"= "Schmidt Center for Data Science and Environment",
@@ -92,7 +92,17 @@ collection <- list(
 The spatial data provided below are mostly for comprehensively assessed taxonomic groups and selected freshwater groups. It is important to note that some species (such as those listed as Data Deficient) are not mapped and subspecies, varieties and subpopulations are mapped within the parent species.
 
 The data are made available in three formats, including taxonomic information, distribution status, IUCN Red List Category, sources and other details about the maps (see metadata document). Most species will have either polygons or points, only some have both",
-  "stac_version"= "1.0.0"
+  "stac_version"= "1.0.0",
+  
+  "stac_extensions"= list(
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ),
+  "publications"= list(
+    "doi"= "https://doi.org/10.1038/s41893-021-00803-6",
+    "citation"= "Noon, M.L., Goldstein, A., Ledezma, J.C. et al. Mapping the irrecoverable carbon in Earth’s ecosystems. Nat Sustain 5, 37–46 (2022). https://doi.org/10.1038/s41893-021-00803-6"
+)
 )
 
 

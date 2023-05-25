@@ -1,0 +1,106 @@
+{
+  "id": "carbon",
+  "type": "Collection",
+  "links": [
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "../catalog.json"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "../catalog.json"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "iucn.json"
+    },
+    {
+      "rel": "about",
+      "href": "https://irrecoverable.resilienceatlas.org/map",
+      "type": "text/html",
+      "title": "Irrecoverable Carbon Resilience Atlas"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://www.conservation.org/projects/irrecoverable-carbon",
+      "title": "Conservation International Irrecoverable Carbon",
+      "type": "text/html"
+    }
+  ],
+  "title": "Irrecoverable Carbon - Conservation International",
+  "assets": {
+    "thumbnail": {
+      "href": "carbon.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Conservation International Carbon map"
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          180,
+          -90,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-05-02T00:00:00Z",
+          "2023-05-02T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-NC",
+  "keywords": [
+    "Carbon",
+    "Data",
+    "Climate"
+  ],
+  "providers": [
+    {
+      "url": "https://doi.org/10.5281/zenodo.4091028",
+      "name": "Zenodo Archive",
+      "roles": [
+        "host"
+      ]
+    },
+    {
+      "url": "https://irrecoverable.resilienceatlas.org/map",
+      "name": "Resilience Atlas",
+      "roles": [
+        "processor",
+        "host"
+      ]
+    },
+    {
+      "url": "https://dse.berkeley.edu",
+      "name": "Schmidt Center for Data Science and Environment",
+      "roles": [
+        "processor",
+        "host"
+      ]
+    }
+  ],
+  "description": "To avoid the catastrophic consequences of climate breakdown, there are certain places that humanity simply cannot afford to destroy. These ecosystems contain more than 139 billion metric tons of “irrecoverable carbon,” most of which is stored in mangroves, peatlands, old-growth forests and marshes.\n\nConservational International scientists led a team of globally renowned experts to determine where these carbon stocks are, whether they are threatened by human activities and how quickly the stocks could be recovered if lost — creating a global map of irrecoverable carbon in Earth’s ecosystems.\n\nInformed by this pioneering research, Conservation International is undertaking an ambitious initiative to protect 4 million square kilometers (more than 1.5 million square miles) of ecosystems — an area about the size of India and Bolivia combined — containing high amounts of irrecoverable carbon and biodiversity.",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "publications": {
+    "doi": "https://doi.org/10.1038/s41893-021-00803-6",
+    "citation": "Noon, M.L., Goldstein, A., Ledezma, J.C. et al. Mapping the irrecoverable carbon in Earth’s ecosystems. Nat Sustain 5, 37–46 (2022). https://doi.org/10.1038/s41893-021-00803-6"
+  }
+}
