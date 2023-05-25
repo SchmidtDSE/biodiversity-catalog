@@ -17,61 +17,61 @@ catalog <- list(
     list(
       "rel"= "self",
       "type"= "application/json",
-      "href"= "stac/v1/catalog.json"
+      "href"= "catalog.json"
     ),
     list(
       "rel"= "root",
       "type"= "application/json",
-      "href"= "stac/v1/catalog.json"
+      "href"= "catalog.json"
     ),
     
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "IUCN Range Maps",
-      "href"= "stac/v1/collections/iucn.json"
+      "href"= "collections/iucn.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "Conservation International Irrecoverable Carbon",
-      "href"= "stac/v1/collections/carbon.json"
+      "href"= "collections/carbon.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "World Protected Areas",
-      "href"= "stac/v1/collections/WPAs.json"
+      "href"= "collections/WPAs.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "Key Biodiversity Areas",
-      "href"= "stac/v1/collections/KBAs.json"
+      "href"= "collections/KBAs.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "Global Mangrove Watch",
-      "href"= "stac/v1/collections/GMW.json"
+      "href"= "collections/GMW.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "EcoRegions 2017",
-      "href"= "stac/v1/collections/ecoregions2017.json"
+      "href"= "collections/ecoregions2017.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "IO Biodiversity Intactness Index",
-      "href"= "stac/v1/collections/io-biodiversity.json"
+      "href"= "collections/io-biodiversity.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "Global Biodiversity Information Facility",
-      "href"= "stac/v1/collections/gbif.json"
+      "href"= "collections/gbif.json"
     )
   )
 )
