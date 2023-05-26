@@ -31,12 +31,12 @@ collection <- list(
       "rel"= "about",
       "href"= "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=About",
       "type"= "text/html",
-      "title"= "World Protected Areas"
+      "title"= "About"
     ),
     list(
       "rel"= "describedby",
       "href"= "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=Methodology",
-      "title"= "World Protected Areas",
+      "title"= "Methodology",
       "type"= "text/html"
     )
   ),
