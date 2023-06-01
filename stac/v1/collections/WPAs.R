@@ -45,10 +45,12 @@ collection <- list(
     "thumbnail"= list(
       "href"= "WPAs.png",
       "type"= "image/png",
-      "roles"= list(
-        "thumbnail"
-      ),
-      "title"= "World Protected Areas"
+      "title"= "World Protected Areas thumbnail"
+    ),
+    "spatial-polygons" = list(
+      "href" = "s3://biodiversity/World-Protected-Areas-May2023.gdb",
+      "title" = "Geodatabase format",
+      "description" = "Access keys required. set S3 endpoint to <https://data.carlboettiger.info>.  Direct downloads of most recent version are available from <https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA>"
     )
   ),
   "extent"= list(
@@ -64,8 +66,8 @@ collection <- list(
     ),
     "temporal"= list(
       "interval" = list(list(
-        "2023-05-02T00:00:00Z",
-        "2023-05-02T00:00:00Z"
+        "2023-05-01T00:00:00Z",
+        "2023-05-30T00:00:00Z"
         ))
     )
   ),

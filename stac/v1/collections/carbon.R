@@ -45,11 +45,103 @@ collection <- list(
     "thumbnail"= list(
       "href"= "carbon.png",
       "type"= "image/png",
-      "roles"= list(
-        "thumbnail"
-      ),
-      "title"= "Conservation International Carbon map"
+      "title"= "Irrecoverable Carbon Thumbnail"
+    ), 
+    "irr_biomass_2010" = list(
+      "href" = "s3://biodiversity/Irrecoverable_C_Biomass_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Irrecoverable Carbon Biomass, 2010"
+    ),
+    "irr_soil_2010" = list(
+      "href" = "s3://biodiversity/Irrecoverable_C_Soil_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Irrecoverable Carbon Soil, 2010"
+    ),
+    "irr_soil_2010" = list(
+      "href" = "s3://biodiversity/Irrecoverable_C_Total_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Irrecoverable Carbon Total, 2010"
+    ),
+    "irr_biomass_2018" = list(
+      "href" = "s3://biodiversity/Irrecoverable_C_Biomass_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Irrecoverable Carbon Biomass, 2018"
+    ),
+    "irr_soil_2018" = list(
+      "href" = "s3://biodiversity/Irrecoverable_C_Soil_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Irrecoverable Carbon Soil, 2018"
+    ),
+    "irr_soil_2018" = list(
+      "href" = "s3://biodiversity/Irrecoverable_C_Total_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Irrecoverable Carbon Total, 2018"
+    ),
+    
+    "vul_biomass_2010" = list(
+      "href" = "s3://biodiversity/Vulnerable_C_Biomass_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Vulnerable Carbon Biomass, 2010"
+    ),
+    "vul_soil_2010" = list(
+      "href" = "s3://biodiversity/Vulnerable_C_Soil_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Vulnerable Carbon Soil, 2010"
+    ),
+    "vul_soil_2010" = list(
+      "href" = "s3://biodiversity/Vulnerable_C_Total_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Vulnerable Carbon Total, 2010"
+    ),
+    "vul_biomass_2018" = list(
+      "href" = "s3://biodiversity/Vulnerable_C_Biomass_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Vulnerable Carbon Biomass, 2018"
+    ),
+    "vul_soil_2018" = list(
+      "href" = "s3://biodiversity/Vulnerable_C_Soil_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Vulnerable Carbon Soil, 2018"
+    ),
+    "vul_soil_2018" = list(
+      "href" = "s3://biodiversity/Vulnerable_C_Total_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Vulnerable Carbon Total, 2018"
+    ),
+    
+    
+        
+    "vul_biomass_2010" = list(
+      "href" = "s3://biodiversity/Manageable_C_Biomass_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Manageable Carbon Biomass, 2010"
+    ),
+    "vul_soil_2010" = list(
+      "href" = "s3://biodiversity/Manageable_C_Soil_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Manageable Carbon Soil, 2010"
+    ),
+    "vul_soil_2010" = list(
+      "href" = "s3://biodiversity/Manageable_C_Total_2010.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Manageable Carbon Total, 2010"
+    ),
+    "vul_biomass_2018" = list(
+      "href" = "s3://biodiversity/Manageable_C_Biomass_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Manageable Carbon Biomass, 2018"
+    ),
+    "vul_soil_2018" = list(
+      "href" = "s3://biodiversity/Manageable_C_Soil_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Manageable Carbon Soil, 2018"
+    ),
+    "vul_soil_2018" = list(
+      "href" = "s3://biodiversity/Manageable_C_Total_2018.tif",
+      "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title" = "Manageable Carbon Total, 2018"
     )
+
   ),
   "extent"= list(
     "spatial"= list(
