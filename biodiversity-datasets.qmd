@@ -103,6 +103,12 @@ maybe also WDOECMs (https://www.protectedplanet.net/en/thematic-areas/oecms?tab=
 
 ## EcoRegions
 
+Publicly accessible, CC-BY zip: 
+
+<https://storage.googleapis.com/teow2016/Ecoregions2017.zip>
+
+<https://developers.google.com/earth-engine/datasets/catalog/RESOLVE_ECOREGIONS_2017>
+
 Resolve 2017 EcoRegions data
 - Web App <https://ecoregions2017.appspot.com/> 
 - Earth Engine entry: <https://developers.google.com/earth-engine/datasets/catalog/RESOLVE_ECOREGIONS_2017>

@@ -1,0 +1,108 @@
+{
+  "id": "ecoregions",
+  "type": "Collection",
+  "links": [
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "../catalog.json"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "../catalog.json"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "ecoregions.json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0",
+      "type": "text/html",
+      "title": "License"
+    },
+    {
+      "rel": "about",
+      "href": "<https://www.resolve.ngo/about.htm",
+      "type": "text/html",
+      "title": "About"
+    }
+  ],
+  "title": "RESOLVE Ecoregions 2017",
+  "assets": {
+    "thumbnail": {
+      "href": "ecoregions.png",
+      "type": "image/png",
+      "title": "Ecoregions 2017 thumbnail"
+    },
+    "flatgeobuf": {
+      "href": "s3://public-biodiversity/Ecoregions2017.fgb",
+      "title": "S3 bucket access",
+      "description": "(anonymous access permitted)",
+      "alternate": {
+        "http": {
+          "title": "http access",
+          "href": "https://minio.carlboettiger.info/public-biodiversity/Ecoregions2017.fgb"
+        },
+        "http.1": {
+          "title": "Original Shapefile",
+          "href": "https://storage.googleapis.com/teow2016/Ecoregions2017.zip"
+        }
+      }
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          180,
+          -90,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY",
+  "keywords": [
+    "ecoregions",
+    "Polygons",
+    "Biodiversity"
+  ],
+  "providers": [
+    {
+      "url": "https://www.resolve.ngo/",
+      "name": "RESOLVE",
+      "roles": [
+        "processor",
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://dse.berkeley.edu",
+      "name": "Schmidt Center for Data Science and Environment",
+      "roles": [
+        "processor",
+        "host"
+      ]
+    }
+  ],
+  "description": "This map offers a depiction of the 846 ecoregions that represent our living planet. Ecoregions are ecosystems of regional extent. These are color coded on this map to highlight their distribution and the biological diversity they represent. This new map is based on recent advances in biogeography - the science concerning the distribution of plants and animals. The original ecoregions map has been widely used since its introduction in 2001, underpinning the most recent analyses of the effects of global climate change on nature by ecologists to the distribution of the world's beetles to modern conservation planning. In the same vein, our updated ecoregions can now be used to chart progress towards achieving the visionary goal of Nature Needs Half, to protect half of all the land on Earth to save a living terrestrial biosphere.",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json"
+  ]
+}

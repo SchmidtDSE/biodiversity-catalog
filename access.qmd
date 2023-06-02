@@ -7,6 +7,8 @@ This Biodiversity Dataset Catalog seeks to make a range of biodiversty data more
 
 Data sources indexed here that are not already available on an external cloud-native storage platform will require access keys (see _Categories of Data Access_ below).  This is necessary to meet the licensing and distribution requirements of the data providers.
 
+Large geospatial raster and vector data can best be accessed with cloud-native protocols such as the [virtual filesystem in GDAL](https://gdal.org/user/virtual_file_systems.html), a popular C(++) library widely used to power various open source geospatial applications.
+
 
 ```{r}
 ```

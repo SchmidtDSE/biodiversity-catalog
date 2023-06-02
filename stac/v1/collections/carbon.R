@@ -41,7 +41,7 @@ collection <- list(
     )
   ),
   "title"= "Irrecoverable Carbon - Conservation International",
-  "assets"= list(
+  "item_assets"= list(
     "thumbnail"= list(
       "href"= "carbon.png",
       "type"= "image/png",
@@ -201,7 +201,8 @@ collection <- list(
 "stac_extensions"= list(
   "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
   "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
-  "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+  "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json"
 )
 )
 
