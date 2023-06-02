@@ -10,13 +10,13 @@ collection <- list(
       "rel"= "parent",
       "title"= "DSE Biodiversity Catalog",
       "type"= "application/json",
-      "href"= "../catalog.json"
+      "href"= "../../catalog.json"
     ),
     list(
       "rel"= "root",
       "type"= "application/json",
       "title"= "DSE Biodiversity Catalog",
-      "href"= "../catalog.json"
+      "href"= "../../catalog.json"
     ),
     list(
       "rel"= "self",
