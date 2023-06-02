@@ -5,12 +5,12 @@
     {
       "rel": "parent",
       "type": "application/json",
-      "href": "../catalog.json"
+      "href": "../../catalog.json"
     },
     {
       "rel": "root",
       "type": "application/json",
-      "href": "../catalog.json"
+      "href": "../../catalog.json"
     },
     {
       "rel": "self",
@@ -35,6 +35,9 @@
     "thumbnail": {
       "href": "ecoregions.png",
       "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ],
       "title": "Ecoregions 2017 thumbnail"
     },
     "flatgeobuf": {

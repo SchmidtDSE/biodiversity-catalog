@@ -6,13 +6,13 @@
       "rel": "parent",
       "title": "DSE Biodiversity Catalog",
       "type": "application/json",
-      "href": "../catalog.json"
+      "href": "../../catalog.json"
     },
     {
       "rel": "root",
       "title": "DSE Biodiversity Catalog",
       "type": "application/json",
-      "href": "../catalog.json"
+      "href": "../../catalog.json"
     },
     {
       "rel": "self",
@@ -44,7 +44,10 @@
     "thumbnail": {
       "href": "carbon.png",
       "type": "image/png",
-      "title": "Irrecoverable Carbon Thumbnail"
+      "title": "Irrecoverable Carbon Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
     },
     "irr_biomass_2010": {
       "href": "s3://biodiversity/Irrecoverable_C_Biomass_2010.tif",

@@ -9,12 +9,12 @@ collection <- list(
      list(
       "rel"= "parent",
       "type"= "application/json",
-      "href"= "../catalog.json"
+      "href"= "../../catalog.json"
     ),
     list(
       "rel"= "root",
       "type"= "application/json",
-      "href"= "../catalog.json"
+      "href"= "../../catalog.json"
     ),
     list(
       "rel"= "self",

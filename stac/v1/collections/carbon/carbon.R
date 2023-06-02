@@ -10,13 +10,13 @@ collection <- list(
       "rel"= "parent",
       "title"= "DSE Biodiversity Catalog",
       "type"= "application/json",
-      "href"= "../catalog.json"
+      "href"= "../../catalog.json"
     ),
     list(
       "rel"= "root",
       "title"= "DSE Biodiversity Catalog",
       "type"= "application/json",
-      "href"= "../catalog.json"
+      "href"= "../../catalog.json"
     ),
     list(
       "rel"= "self",
@@ -48,7 +48,10 @@ collection <- list(
     "thumbnail"= list(
       "href"= "carbon.png",
       "type"= "image/png",
-      "title"= "Irrecoverable Carbon Thumbnail"
+      "title"= "Irrecoverable Carbon Thumbnail",
+      "roles"= list(
+        "thumbnail"
+      )
     ), 
     "irr_biomass_2010" = list(
       "href" = "s3://biodiversity/Irrecoverable_C_Biomass_2010.tif",

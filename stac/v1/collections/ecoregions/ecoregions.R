@@ -9,12 +9,12 @@ collection <- list(
      list(
       "rel"= "parent",
       "type"= "application/json",
-      "href"= "../catalog.json"
+      "href"= "../../catalog.json"
     ),
     list(
       "rel"= "root",
       "type"= "application/json",
-      "href"= "../catalog.json"
+      "href"= "../../catalog.json"
     ),
     list(
       "rel"= "self",
@@ -39,6 +39,9 @@ collection <- list(
     "thumbnail"= list(
       "href"= "ecoregions.png",
       "type"= "image/png",
+      "roles"= list(
+        "thumbnail"
+      ),
       "title"= "Ecoregions 2017 thumbnail"
     ),
     "flatgeobuf"= list(
