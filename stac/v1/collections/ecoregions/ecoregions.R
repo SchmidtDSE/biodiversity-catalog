@@ -29,7 +29,7 @@ collection <- list(
     ),
     list(
       "rel"= "about",
-      "href"= "<https://www.resolve.ngo/about.htm",
+      "href"= "https://www.resolve.ngo/about.htm",
       "type"= "text/html",
       "title"= "About"
     )
