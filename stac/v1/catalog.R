@@ -16,11 +16,13 @@ catalog <- list(
   "links"= list(
     list(
       "rel"= "self",
+      "title" = "DSE Biodiversity Catalog",
       "type"= "application/json",
       "href"= "catalog.json"
     ),
     list(
       "rel"= "root",
+      "title" = "DSE Biodiversity Catalog",
       "type"= "application/json",
       "href"= "catalog.json"
     ),
@@ -29,37 +31,37 @@ catalog <- list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "IUCN Range Maps",
-      "href"= "collections/iucn.json"
+      "href"= "collections/iucn/collection.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "Conservation International Irrecoverable Carbon",
-      "href"= "collections/carbon.json"
+      "href"= "collections/carbon/collection.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "World Protected Areas",
-      "href"= "collections/WPAs.json"
+      "href"= "collections/WPAs/collection.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "Key Biodiversity Areas",
-      "href"= "collections/KBAs.json"
+      "href"= "collections/KBAs/collection.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "Global Mangrove Watch",
-      "href"= "collections/GMW.json"
+      "href"= "collections/mangroves/collection.json"
     ),
     list(
       "rel"= "child",
       "type"= "application/json",
       "title"= "EcoRegions 2017",
-      "href"= "collections/ecoregions2017.json"
+      "href"= "collections/ecoregions/collection.json"
     ),
     list(
       "rel"= "child",

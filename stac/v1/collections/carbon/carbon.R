@@ -8,16 +8,19 @@ collection <- list(
   "links"= list(
      list(
       "rel"= "parent",
+      "title"= "DSE Biodiversity Catalog",
       "type"= "application/json",
       "href"= "../catalog.json"
     ),
     list(
       "rel"= "root",
+      "title"= "DSE Biodiversity Catalog",
       "type"= "application/json",
       "href"= "../catalog.json"
     ),
     list(
       "rel"= "self",
+      "title"= "Conservation International Irrecoverable Carbon",
       "type"= "application/json",
       "href"= "carbon.json"
     ),
@@ -208,7 +211,7 @@ collection <- list(
 
 
 
-path <- file.path("stac/v1/collections/", "carbon.json")
+path <- file.path("stac/v1/collections/carbon/collection.json")
 jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE)
 stac4cast::stac_validate(path)
 

@@ -8,16 +8,19 @@ collection <- list(
   "links"= list(
      list(
       "rel"= "parent",
+      "title"= "DSE Biodiversity Catalog",
       "type"= "application/json",
       "href"= "../catalog.json"
     ),
     list(
       "rel"= "root",
       "type"= "application/json",
+      "title"= "DSE Biodiversity Catalog",
       "href"= "../catalog.json"
     ),
     list(
       "rel"= "self",
+      "title"= "Key Biodiversity Areas",
       "type"= "application/json",
       "href"= "KBAs.json"
     ),
@@ -105,7 +108,7 @@ The KBA criteria also allow proposers to assess the genetic variation within a s
 
 
 
-path <- file.path("stac/v1/collections/", "KBAs.json")
+path <- file.path("stac/v1/collections/KBAs/collection.json")
 jsonlite::write_json(collection, path, pretty=TRUE, 
                      auto_unbox=TRUE, null="null")
 stac4cast::stac_validate(path)

@@ -96,7 +96,7 @@ collection <- list(
 
 
 
-path <- file.path("stac/v1/collections/", "mangroves.json")
+path <- file.path("stac/v1/collections/mangroves/collection.json")
 jsonlite::write_json(collection, path, pretty=TRUE, 
                      auto_unbox=TRUE, null="null")
 stac4cast::stac_validate(path)

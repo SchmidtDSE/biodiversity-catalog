@@ -4,16 +4,19 @@
   "links": [
     {
       "rel": "parent",
+      "title": "DSE Biodiversity Catalog",
       "type": "application/json",
       "href": "../catalog.json"
     },
     {
       "rel": "root",
+      "title": "DSE Biodiversity Catalog",
       "type": "application/json",
       "href": "../catalog.json"
     },
     {
       "rel": "self",
+      "title": "Conservation International Irrecoverable Carbon",
       "type": "application/json",
       "href": "carbon.json"
     },
@@ -194,6 +197,7 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
     "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json"
   ]
 }

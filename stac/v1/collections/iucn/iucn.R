@@ -103,7 +103,7 @@ The data are made available in three formats, including taxonomic information, d
 
 
 
-path <- file.path("stac/v1/collections/", "iucn.json")
+path <- file.path("stac/v1/collections/iucn/collection.json")
 jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE)
 stac4cast::stac_validate(path)
 

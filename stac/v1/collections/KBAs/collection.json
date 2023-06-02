@@ -4,16 +4,19 @@
   "links": [
     {
       "rel": "parent",
+      "title": "DSE Biodiversity Catalog",
       "type": "application/json",
       "href": "../catalog.json"
     },
     {
       "rel": "root",
       "type": "application/json",
+      "title": "DSE Biodiversity Catalog",
       "href": "../catalog.json"
     },
     {
       "rel": "self",
+      "title": "Key Biodiversity Areas",
       "type": "application/json",
       "href": "KBAs.json"
     },
