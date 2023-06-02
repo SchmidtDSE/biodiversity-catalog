@@ -46,8 +46,11 @@ collection <- list(
     ),
     "flatgeobuf"= list(
       "href" = "s3://public-biodiversity/Ecoregions2017.fgb",
-      "title"= "S3 bucket access",
-      "description" =  "(anonymous access permitted)",
+      "title"= "Polygon data",
+      "description" =  "S3 Bucket access (anonymous access permitted)",
+      "roles"= list(
+        "data"
+      ),
       "alternate" = list(
         "http" =  list(
           "title"= "http access",
