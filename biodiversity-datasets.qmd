@@ -51,6 +51,27 @@ and corresponding same three COG files for:
 
 ## Global Mangrove Watch
 
+<https://www.globalmangrovewatch.org/> 
+
+Has spatial data layers for: 
+
+- Mangrove Habitat Extent
+- Mangrove Net Change
+- Mangrove Alerts
+- Mangrove Restoration
+- Mangrove Biomass
+- Mangrove Height
+- Mangrove Blue Carbon
+
+see: 
+
+- <https://www.mangrovealliance.org/about-us/>
+- <https://doi.org/10.5281/zenodo.1469347>
+
+Much more data in Google bucket storage: <https://console.cloud.google.com/storage/browser/mangrove_atlas>
+
+S3 products as well, e.g. 
+
 - https://datadownload-production.s3.amazonaws.com/GMW_v3_2015.zip
 (or in S3 notation:)
 - s3://datadownload-production/GMW_v3_2015.zip

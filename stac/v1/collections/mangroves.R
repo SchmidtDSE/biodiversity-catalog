@@ -3,7 +3,7 @@ library(stac4cast)
 library(jsonlite)
 
 collection <- list(
-  "id"= "WPAs",
+  "id"= "mangroves",
   "type"= "Collection",
   "links"= list(
      list(
@@ -19,38 +19,27 @@ collection <- list(
     list(
       "rel"= "self",
       "type"= "application/json",
-      "href"= "WPAs.json"
+      "href"= "mangroves.json"
     ),
     list(
       "rel"= "license",
-      "href"= "https://www.protectedplanet.net/en/legal",
+      "href"= "https://www.mangrovealliance.org/terms-of-use/",
       "type"= "text/html",
       "title"= "License"
     ),
     list(
       "rel"= "about",
-      "href"= "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=About",
+      "href"= "<https://www.mangrovealliance.org/about-us/",
       "type"= "text/html",
       "title"= "About"
-    ),
-    list(
-      "rel"= "describedby",
-      "href"= "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=Methodology",
-      "title"= "Methodology",
-      "type"= "text/html"
     )
   ),
-  "title"= "World Protected Areas",
+  "title"= "Global Mangrove Watch",
   "assets"= list(
     "thumbnail"= list(
-      "href"= "WPAs.png",
+      "href"= "mangroves.png",
       "type"= "image/png",
-      "title"= "World Protected Areas thumbnail"
-    ),
-    "spatial-polygons" = list(
-      "href" = "s3://biodiversity/World-Protected-Areas-May2023.gdb",
-      "title" = "Geodatabase format",
-      "description" = "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>.  Direct downloads of most recent version are available from <https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA>"
+      "title"= "Global Mangrove Watch thumbnail"
     )
   ),
   "extent"= list(
@@ -66,21 +55,21 @@ collection <- list(
     ),
     "temporal"= list(
       "interval" = list(list(
-        "2023-05-01T00:00:00Z",
-        "2023-05-30T00:00:00Z"
+        "2015-01-01T00:00:00Z",
+        NULL
         ))
     )
   ),
   "license"= "proprietary",
   "keywords"= list(
-    "Protected Areas",
+    "Mangroves",
     "Polygons",
     "Biodiversity"
   ),
   "providers"= list(
     list(
-      "url"= "https://www.protectedplanet.net/en/about",
-      "name"= "Protected Planet",
+      "url"= "https://www.mangrovealliance.org",
+      "name"= "Mangrove Alliance",
       "roles"= list(
         "processor", "licensor"
       )
@@ -107,7 +96,8 @@ collection <- list(
 
 
 
-path <- file.path("stac/v1/collections/", "WPAs.json")
-jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE)
+path <- file.path("stac/v1/collections/", "mangroves.json")
+jsonlite::write_json(collection, path, pretty=TRUE, 
+                     auto_unbox=TRUE, null="null")
 stac4cast::stac_validate(path)
 

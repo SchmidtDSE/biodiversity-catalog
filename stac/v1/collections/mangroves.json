@@ -1,0 +1,92 @@
+{
+  "id": "mangroves",
+  "type": "Collection",
+  "links": [
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "../catalog.json"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "../catalog.json"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "mangroves.json"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.mangrovealliance.org/terms-of-use/",
+      "type": "text/html",
+      "title": "License"
+    },
+    {
+      "rel": "about",
+      "href": "<https://www.mangrovealliance.org/about-us/",
+      "type": "text/html",
+      "title": "About"
+    }
+  ],
+  "title": "Global Mangrove Watch",
+  "assets": {
+    "thumbnail": {
+      "href": "mangroves.png",
+      "type": "image/png",
+      "title": "Global Mangrove Watch thumbnail"
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          180,
+          -90,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2015-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "proprietary",
+  "keywords": [
+    "Mangroves",
+    "Polygons",
+    "Biodiversity"
+  ],
+  "providers": [
+    {
+      "url": "https://www.mangrovealliance.org",
+      "name": "Mangrove Alliance",
+      "roles": [
+        "processor",
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://dse.berkeley.edu",
+      "name": "Schmidt Center for Data Science and Environment",
+      "roles": [
+        "processor",
+        "host"
+      ]
+    }
+  ],
+  "description": "The World Database on Protected Areas (WDPA) is the most comprehensive global database of marine and terrestrial protected areas. It is a joint project between UN Environment Programme and the International Union for Conservation of Nature (IUCN), and is managed by UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC), in collaboration with governments, non-governmental organisations, academia and industry.The WDPA is updated on a monthly basis",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ]
+}
