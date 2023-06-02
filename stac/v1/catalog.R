@@ -80,6 +80,30 @@ catalog <- list(
       "type"= "application/json",
       "title"= "MoBI: Map of Biodiversity Importance",
       "href"= "https://planetarycomputer.microsoft.com/api/stac/v1/collections/mobi"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
+      "title"= "10m Annual Land Use Land Cover (Impact Observatory)",
+      "href"= "https://planetarycomputer.microsoft.com/api/stac/v1/collections/io-lulc-9-class"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
+      "title"= "FWS National Wetlands Inventory",
+      "href"= "https://planetarycomputer.microsoft.com/api/stac/v1/collections/fws-nwi"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
+      "title"= "ESA WorldCover",
+      "href"= "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-worldcover"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
+      "title"= "ESA Climate Change Initiative Land Cover Maps (Cloud Optimized GeoTIFF)",
+      "href"= "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-cci-lc"
     )
   )
 )

@@ -40,7 +40,7 @@
     }
   ],
   "title": "Irrecoverable Carbon - Conservation International",
-  "item_assets": {
+  "assets": {
     "thumbnail": {
       "href": "carbon.png",
       "type": "image/png",
@@ -48,7 +48,9 @@
       "roles": [
         "thumbnail"
       ]
-    },
+    }
+  },
+  "item_assets": {
     "irr_biomass_2010": {
       "href": "s3://biodiversity/Irrecoverable_C_Biomass_2010.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",

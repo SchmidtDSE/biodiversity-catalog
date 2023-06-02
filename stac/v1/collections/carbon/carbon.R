@@ -44,16 +44,16 @@ collection <- list(
     )
   ),
   "title"= "Irrecoverable Carbon - Conservation International",
-  "item_assets"= list(
+  "assets"= list(
     "thumbnail"= list(
       "href"= "carbon.png",
       "type"= "image/png",
       "title"= "Irrecoverable Carbon Thumbnail",
-      "roles"= list(
-        "thumbnail"
-      )
-    ), 
-    "irr_biomass_2010" = list(
+      "roles"= list("thumbnail")
+    )
+  ), 
+  "item_assets"= list(
+      "irr_biomass_2010" = list(
       "href" = "s3://biodiversity/Irrecoverable_C_Biomass_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized",
       "title" = "Irrecoverable Carbon Biomass, 2010"
