@@ -38,7 +38,10 @@
     "thumbnail": {
       "href": "KBAs.png",
       "type": "image/png",
-      "title": "KBAs thumbnail"
+      "title": "KBAs thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
     }
   },
   "extent": {

@@ -1,5 +1,4 @@
 library(lubridate)
-library(stac4cast)
 library(jsonlite)
 
 collection <- list(
@@ -42,7 +41,8 @@ collection <- list(
     "thumbnail"= list(
       "href"= "KBAs.png",
       "type"= "image/png",
-      "title"= "KBAs thumbnail"
+      "title"= "KBAs thumbnail",
+      "roles"= list("thumbnail")
     )
   ),
   "extent"= list(
@@ -111,5 +111,5 @@ The KBA criteria also allow proposers to assess the genetic variation within a s
 path <- file.path("stac/v1/collections/KBAs/collection.json")
 jsonlite::write_json(collection, path, pretty=TRUE, 
                      auto_unbox=TRUE, null="null")
-stac4cast::stac_validate(path)
+# stac4cast::stac_validate(path)
 

@@ -1,0 +1,105 @@
+{
+  "id": "iucn_greenlist",
+  "type": "Collection",
+  "links": [
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "../../catalog.json"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "../../catalog.json"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "iucn_greenlist.json"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.protectedplanet.net/en/legal",
+      "type": "text/html",
+      "title": "License"
+    },
+    {
+      "rel": "about",
+      "href": "https://iucngreenlist.org/",
+      "type": "text/html",
+      "title": "About"
+    }
+  ],
+  "title": "IUCN Green List",
+  "assets": {
+    "thumbnail": {
+      "href": "iucn_greenlist.png",
+      "type": "image/png",
+      "title": "IUCN Green List thumbnail",
+      "role": [
+        "thumbnail"
+      ]
+    },
+    "spatial-polygons": {
+      "href": "s3://biodiversity/iucn_greenlist-June2023.gdb",
+      "title": "Geodatabase format",
+      "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>.  Direct downloads of most recent version are available from <https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA>"
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          180,
+          -90,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-06-01T00:00:00Z",
+          "2023-06-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "proprietary",
+  "keywords": [
+    "Protected Areas",
+    "Polygons",
+    "Equity",
+    "Justice",
+    "IUCN",
+    "Greenlist",
+    "Biodiversity"
+  ],
+  "providers": [
+    {
+      "url": "https://www.protectedplanet.net/en/about",
+      "name": "Protected Planet",
+      "roles": [
+        "processor",
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://dse.berkeley.edu",
+      "name": "Schmidt Center for Data Science and Environment",
+      "roles": [
+        "processor",
+        "host"
+      ]
+    }
+  ],
+  "description": "The IUCN Green List of Protected and Conserved Areas programme aims to improve the contribution of equitably governed and effectively managed protected areas to nature conservation and sustainable development, through the provision of associated social, economic, cultural, and spiritual values. The overarching objective of the programme is to increase and recognise the number of effectively managed and equitably governed protected and conserved areas, to deliver conservation outcomes.\n\nThe Global Standard of the IUCN Green List of Protected and Conserved Areas provides a global benchmark for how to meet the environmental challenges of the 21st century. It is also a capacity development tool for protected areas, and helps to identify which aspects of protected and conserved areas need to be strengthened. By focusing efforts on these aspects, it is more likely that success will be achieved.\n\nA protected or conserved area that reaches the IUCN Green List Standard is certified and recognised as achieving ongoing results for people and nature in a fair and effective way. Any site can join, and work its way towards achieving verified success, and then maintain the Standard or further improve.\n\nAny protected and conserved area that gains ‘Green List’ status demonstrates:\n\n- Respect: for the local community through fair and meaningful engagement of rights-holders and stakeholders\n- Design: planning that identifies the needs to secure the important values of the area\n- Effective management: monitoring of the status of these important values\n- Successful conservation results: for nature and for people\n- Clear contribution: to climate change responses, health and well-being and other challenges\n\nFor more information about the IUCN Green List of Protected and Conserved Areas and the associated global Standard, visit the [IUCN Green List Website](https://iucngreenlist.org/).\n\nMore than 50 countries have signed up to implement the IUCN Green List of Protected and Conserved Areas.\n\n",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json"
+  ]
+}

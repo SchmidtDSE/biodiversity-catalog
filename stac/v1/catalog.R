@@ -30,7 +30,7 @@ catalog <- list(
     list(
       "rel"= "child",
       "type"= "application/json",
-      "title"= "IUCN Range Maps",
+      "title"= "IUCN Redlist Range Maps",
       "href"= "collections/iucn/collection.json"
     ),
     list(
@@ -48,8 +48,20 @@ catalog <- list(
     list(
       "rel"= "child",
       "type"= "application/json",
+      "title"= "Marine Protected Areas",
+      "href"= "collections/MPAs/collection.json"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
       "title"= "Key Biodiversity Areas",
       "href"= "collections/KBAs/collection.json"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
+      "title"= "IUCN Green List",
+      "href"= "collections/iucn_greenlist/collection.json"
     ),
     list(
       "rel"= "child",
