@@ -2,7 +2,7 @@ library(lubridate)
 library(jsonlite)
 
 collection <- list(
-  "id"= "MPAs",
+  "id"= "ebird",
   "type"= "Collection",
   "links"= list(
      list(
@@ -18,32 +18,32 @@ collection <- list(
     list(
       "rel"= "self",
       "type"= "application/json",
-      "href"= "MPAs.json"
+      "href"= "ebird.json"
     ),
     list(
       "rel"= "license",
-      "href"= "https://www.protectedplanet.net/en/legal",
+      "href"= "https://www.birds.cornell.edu/home/ebird-data-access-terms-of-use/",
       "type"= "text/html",
       "title"= "License"
     ),
     list(
       "rel"= "about",
-      "href"= "https://www.protectedplanet.net/en/thematic-areas/marine-protected-areas",
+      "href"= "https://ebird.org/about",
       "type"= "text/html",
       "title"= "About"
     )
   ),
-  "title"= "Marine Protected Areas",
+  "title"= "eBird",
   "assets"= list(
     "thumbnail"= list(
-      "href"= "MPAs.png",
+      "href"= "ebird.png",
       "type"= "image/png",
-      "title"= "Marine Protected Areas thumbnail",
+      "title"= "eBird data thumbnail",
       "role"=list("thumbnail")
     ),
-    "spatial-polygons" = list(
-      "href" = "s3://biodiversity/Marine-Protected-Areas-June2023.gdb",
-      "title" = "Geodatabase format",
+    "parquet" = list(
+      "href" = "s3://ebird",
+      "title" = "Parquet format",
       "description" = "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>."
     )
   ),
@@ -60,21 +60,22 @@ collection <- list(
     ),
     "temporal"= list(
       "interval" = list(list(
-        "2023-06-01T00:00:00Z",
-        "2023-06-01T00:00:00Z"
+        "2002-01-01T00:00:00Z",
+        NULL
         ))
     )
   ),
   "license"= "proprietary",
   "keywords"= list(
-    "Protected Areas",
-    "Polygons",
-    "Biodiversity"
+    "birds",
+    "occurance",
+    "citizen science",
+    "biodiversity"
   ),
   "providers"= list(
     list(
-      "url"= "https://www.protectedplanet.net/en/about",
-      "name"= "Protected Planet",
+      "url"= "https://www.birds.cornell.edu/",
+      "name"= "Cornell Lab of Ornithology",
       "roles"= list(
         "processor", "licensor"
       )
@@ -89,9 +90,7 @@ collection <- list(
       )
     )
   ),
-  "description"= "The global coverage of marine protected areas (MPAs) is 8.16%. The Global Ocean can be divided into areas within national jurisdiction (National Waters) and those in international waters (Areas Beyond National Jurisdiction (ABNJ))
-
-MPAs can be more easily created by governments in national waters where there are dedicated legal systems in place. In ABNJ it is more difficult to create MPAs due to the complex legal framework in place. As such, the percentage of MPAs created within national waters is much higher than that for ABNJ. National waters represent 39% of the global ocean and at present, 18.70% of these waters are designated as protected areas. In contrast, only 1.44% of ABNJ, which makes up the remaining 61% of the global ocean, has been established as protected areas. At present, international discussions are underway to establish ways of simplifying the process to create MPAs in ABNJ. For more information on this, please see the DOALOS website.",
+  "description"= "eBird is among the world’s largest biodiversity-related science projects, with more than 100 million bird sightings contributed annually by eBirders around the world and an average participation growth rate of approximately 20% year over year. A collaborative enterprise with hundreds of partner organizations, thousands of regional experts, and hundreds of thousands of users, eBird is managed by the Cornell Lab of Ornithology.",
   "stac_version"= "1.0.0",
   
   "stac_extensions"= list(
@@ -104,7 +103,7 @@ MPAs can be more easily created by governments in national waters where there ar
 
 
 
-path <- file.path("stac/v1/collections/MPAs/collection.json")
+path <- file.path("stac/v1/collections/ebird/collection.json")
 jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE)
 # stac4cast::stac_validate(path)
 

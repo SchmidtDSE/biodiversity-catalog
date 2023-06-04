@@ -43,7 +43,7 @@
     "spatial-polygons": {
       "href": "s3://biodiversity/Marine-Protected-Areas-June2023.gdb",
       "title": "Geodatabase format",
-      "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>.  Direct downloads of most recent version are available from <https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA>"
+      "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>."
     }
   },
   "extent": {

@@ -24,7 +24,7 @@
     {
       "rel": "child",
       "type": "application/json",
-      "title": "IUCN Range Maps",
+      "title": "IUCN Redlist Range Maps",
       "href": "collections/iucn/collection.json"
     },
     {
@@ -42,8 +42,32 @@
     {
       "rel": "child",
       "type": "application/json",
+      "title": "Marine Protected Areas",
+      "href": "collections/MPAs/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
       "title": "Key Biodiversity Areas",
       "href": "collections/KBAs/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "IUCN Green List",
+      "href": "collections/iucn_greenlist/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "eBird",
+      "href": "collections/ebird/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "National Ecological Observatory Network",
+      "href": "collections/neon/collection.json"
     },
     {
       "rel": "child",
@@ -92,6 +116,12 @@
       "type": "application/json",
       "title": "ESA WorldCover",
       "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-worldcover"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "ESA Climate Change Initiative Land Cover Maps (Cloud Optimized GeoTIFF)",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-cci-lc"
     }
   ]
 }

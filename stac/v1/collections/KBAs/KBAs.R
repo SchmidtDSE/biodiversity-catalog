@@ -45,6 +45,18 @@ collection <- list(
       "roles"= list("thumbnail")
     )
   ),
+  "item_assets"= list(
+    "spatial-polygons" = list(
+      "href" = "s3://biodiversity/KBAs-March2023/KBAsGlobal_2023_March_01_POL.shp",
+      "title" = "shapefile format",
+      "description" = "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>"
+    ),
+    "spatial-points" = list(
+      "href" = "s3://biodiversity/KBAs-March2023/KBAsGlobal_2023_March_01_PNT.shp",
+      "title" = "shapefile format",
+      "description" = "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>"
+    )
+  ),
   "extent"= list(
     "spatial"= list(
       "bbox"= list(

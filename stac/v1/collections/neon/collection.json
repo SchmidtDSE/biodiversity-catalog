@@ -1,0 +1,113 @@
+{
+  "id": "neon",
+  "type": "Collection",
+  "links": [
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "../../catalog.json"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "../../catalog.json"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "neon.json",
+      "title": "National Ecological Observatory Network (NEON)"
+    },
+    {
+      "rel": "license",
+      "href": "http://creativecommons.org/publicdomain/mark/1.0",
+      "type": "text/html",
+      "title": "License"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.neonscience.org/",
+      "type": "text/html",
+      "title": "About"
+    }
+  ],
+  "title": "National Ecological Observatory Network",
+  "assets": {
+    "thumbnail": {
+      "href": "https://www.neonscience.org/sites/default/files/styles/max_width_1170px/public/2020-08/lidar_GrandMesa_sq.jpg",
+      "type": "image/png",
+      "title": "NEON Data Portal thumbnail",
+      "role": [
+        "thumbnail"
+      ]
+    },
+    "data-portal": {
+      "href": "https://data.neonscience.org",
+      "title": "NEON Web portal",
+      "description": "NEON data is avialable through a public Google Cloud object store."
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -149.6106,
+          18.1135,
+          -66.7987,
+          68.6698
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-06-01T00:00:00Z",
+          "2023-06-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "Public Domain",
+  "keywords": [
+    "NEON",
+    "Biodiversity"
+  ],
+  "providers": [
+    {
+      "url": "https://neonscience.org",
+      "name": "National Ecological Observatory Network",
+      "roles": [
+        "processor"
+      ]
+    },
+    {
+      "url": "https://www.battelle.org/",
+      "name": "Battelle Memorial Institute",
+      "roles": [
+        "manager"
+      ]
+    },
+    {
+      "url": "https://www.nsf.gov/",
+      "name": "National Science Foundation",
+      "roles": [
+        "funder"
+      ]
+    },
+    {
+      "url": "https://cloud.google.com/storage",
+      "name": "Google Cloud Storage",
+      "roles": [
+        "host"
+      ]
+    }
+  ],
+  "description": "National Ecological Observatory Network (NEON) is a large facility program operated by Battelle Memorial Institute and funded by the National Science Foundation. In full operation since 2019, NEON gathers and provides long-term, standardized data on ecological responses of the biosphere to changes in land use and climate, and on feedback with the geosphere, hydrosphere, and atmosphere.[1] NEON is a continental-scale research platform for understanding how and why our ecosystems are changing.",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json"
+  ]
+}

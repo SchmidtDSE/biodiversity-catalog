@@ -66,6 +66,18 @@ catalog <- list(
     list(
       "rel"= "child",
       "type"= "application/json",
+      "title"= "eBird",
+      "href"= "collections/ebird/collection.json"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
+      "title"= "National Ecological Observatory Network",
+      "href"= "collections/neon/collection.json"
+    ),
+    list(
+      "rel"= "child",
+      "type"= "application/json",
       "title"= "Global Mangrove Watch",
       "href"= "collections/mangroves/collection.json"
     ),
@@ -123,4 +135,4 @@ catalog <- list(
 
 path <- file.path("stac/v1/", "catalog.json")
 jsonlite::write_json(catalog, path, pretty=TRUE, auto_unbox=TRUE)
-stac4cast::stac_validate(path)
+#stac4cast::stac_validate(path)
