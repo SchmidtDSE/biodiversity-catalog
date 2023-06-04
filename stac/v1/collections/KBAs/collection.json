@@ -46,12 +46,12 @@
   },
   "item_assets": {
     "spatial-polygons": {
-      "href": "s3://biodiversity/KBAs-March2023/KBAsGlobal_2023_March_01_POL.shp",
+      "href": "/vsis3/biodiversity/KBAs-March2023/KBAsGlobal_2023_March_01_POL.shp",
       "title": "shapefile format",
       "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>"
     },
     "spatial-points": {
-      "href": "s3://biodiversity/KBAs-March2023/KBAsGlobal_2023_March_01_PNT.shp",
+      "href": "/vsis3/biodiversity/KBAs-March2023/KBAsGlobal_2023_March_01_PNT.shp",
       "title": "shapefile format",
       "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>"
     }

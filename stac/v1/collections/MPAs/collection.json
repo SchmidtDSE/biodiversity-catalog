@@ -41,7 +41,7 @@
       ]
     },
     "spatial-polygons": {
-      "href": "s3://biodiversity/Marine-Protected-Areas-June2023.gdb",
+      "href": "/vsis3/biodiversity/Marine-Protected-Areas-June2023.gdb",
       "title": "Geodatabase format",
       "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>."
     }

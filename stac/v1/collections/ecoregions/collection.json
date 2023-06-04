@@ -41,7 +41,7 @@
       "title": "Ecoregions 2017 thumbnail"
     },
     "flatgeobuf": {
-      "href": "s3://public-biodiversity/Ecoregions2017.fgb",
+      "href": "/vsis3/public-biodiversity/Ecoregions2017.fgb",
       "title": "Polygon data",
       "description": "S3 Bucket access (anonymous access permitted)",
       "roles": [

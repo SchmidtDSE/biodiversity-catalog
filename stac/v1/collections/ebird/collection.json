@@ -41,7 +41,7 @@
       ]
     },
     "parquet": {
-      "href": "s3://ebird",
+      "href": "/vsis3/ebird",
       "title": "Parquet format",
       "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>."
     }
