@@ -51,6 +51,25 @@ collection <- list(
       "title"= "IUCN Redlist"
     )
   ),
+  
+  "item_assets"= list(
+    "mammals" = list(
+      "href" = "/vsis3/iucn/MAMMALS.zip",
+      "title" = "Mammals range maps (shapefile)"
+    ),
+    "reptiles" = list(
+      "href" = "/vsis3/iucn/REPTILES.zip",
+      "title" = "Reptiles range maps (shapefile)"
+    ),
+    "amphibians" = list(
+      "href" = "/vsis3/iucn/AMPHIBIANS.zip",
+      "title" = "Amphibians range maps (shapefile)"
+    ),
+    "birds" = list(
+      "href" = "/vsis3/iucn/BOTW/birds.gdb",
+      "title" = "Birds of the World rangemap (geodatabase)"
+    )
+  ),
   "extent"= list(
     "spatial"= list(
       "bbox"= list(
@@ -98,6 +117,13 @@ collection <- list(
 The spatial data provided below are mostly for comprehensively assessed taxonomic groups and selected freshwater groups. It is important to note that some species (such as those listed as Data Deficient) are not mapped and subspecies, varieties and subpopulations are mapped within the parent species.
 
 The data are made available in three formats, including taxonomic information, distribution status, IUCN Red List Category, sources and other details about the maps (see metadata document). Most species will have either polygons or points, only some have both",
+  
+  "stac_extensions"= list(
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json"
+  ),  
   "stac_version"= "1.0.0"
 )
 

@@ -162,13 +162,21 @@ Relevant abiotic environment / climate layers:
 
 - Green biomass metrics, LAI, NDVI, ...
 
-# Global forest watch?
+# Global forest watch
+
+- See Hansen tree cover maps
 
 # Land cover
 
 - European Space Agency Climate Change Initiative (ESA CCI) land use and cover maps?
 - Potential land cover maps (for restoration potential, maybe similar to Strassburg et al?)
 - 
+
+Global CO2 total (also flux data available)
+
+# https://gml.noaa.gov/aftp/products/carbontracker/co2/CT2022/molefractions/co2_total/
+
+
 ---------
 
 
