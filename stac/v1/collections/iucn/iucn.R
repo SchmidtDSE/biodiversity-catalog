@@ -55,19 +55,23 @@ collection <- list(
   "item_assets"= list(
     "mammals" = list(
       "href" = "/vsis3/iucn/MAMMALS.zip",
-      "title" = "Mammals range maps (shapefile)"
+      "title" = "Mammals range maps (shapefile)",
+      "roles"=list("data")
     ),
     "reptiles" = list(
       "href" = "/vsis3/iucn/REPTILES.zip",
-      "title" = "Reptiles range maps (shapefile)"
+      "title" = "Reptiles range maps (shapefile)",
+      "roles"=list("data")
     ),
     "amphibians" = list(
       "href" = "/vsis3/iucn/AMPHIBIANS.zip",
-      "title" = "Amphibians range maps (shapefile)"
+      "title" = "Amphibians range maps (shapefile)",
+      "roles"=list("data")
     ),
     "birds" = list(
       "href" = "/vsis3/iucn/BOTW/birds.gdb",
-      "title" = "Birds of the World rangemap (geodatabase)"
+      "title" = "Birds of the World rangemap (geodatabase)",
+      "roles"=list("data")
     )
   ),
   "extent"= list(
