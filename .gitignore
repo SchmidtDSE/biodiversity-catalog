@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 .Rbuildignore
+/.quarto/
+/_site/
