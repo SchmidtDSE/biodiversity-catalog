@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>access</title>
+<title>Biodiversity Dataset Catalog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">access</h1>
+<h1 class="title">Biodiversity Dataset Catalog</h1>
 </div>
 
 
@@ -152,9 +152,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>This Biodiversity Dataset Catalog seeks to make a range of biodiversty data more readily findable, accessible and interoperable (see <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>), while in a manner consistent with data sovereignty and ethics (<a href="https://www.gida-global.org/care">CARE principles</a>). Data products listed here support access with portable, cloud native, high-performance protocols that avoid the need to download entire data files. When existing data providers already meet these objectives, those sources are simply linked from the catalog. Other sources are mirrored on a local object store based on an open source software platform which supports the widely used S3 API for cloud-native operations (<a href="https://min.io/">MINIO</a>). Access to mirrored content may require <a href="access_keys.html">access keys</a> to meet licensing and re-distribution policies of certain data providers. The entire setup, including catalog and object store, can be easily replicated on commodity hardware using only open source tools.</p>
-<section id="cloud-native-protocols" class="level1">
-<h1>Cloud-native protocols</h1>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>Our <a href="https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/catalog.json?.language=en">Biodiversity Dataset Catalog</a> seeks to make a range of biodiversty data more readily findable, accessible and interoperable (see <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>), while in a manner consistent with data sovereignty and ethics (<a href="https://www.gida-global.org/care">CARE principles</a>). Data products listed here support access with portable, cloud native, high-performance protocols that avoid the need to download entire data files. When existing data providers already meet these objectives, those sources are simply linked from the catalog. Other sources are mirrored on a local object store based on an open source software platform which supports the widely used S3 API for cloud-native operations (<a href="https://min.io/">MINIO</a>). Access to mirrored content may require <a href="access_keys.html">access keys</a> to meet licensing and re-distribution policies of certain data providers. The entire setup, including catalog and object store, can be easily replicated on commodity hardware using only open source tools.</p>
+</section>
+<section id="data-access" class="level1">
+<h1>Data Access</h1>
 <p>Large geospatial raster and vector data can best be accessed with ‘cloud-native’ protocols such as the <a href="https://gdal.org/user/virtual_file_systems.html">virtual filesystem in GDAL</a>, a popular C(++) library widely used to power various open source geospatial applications. This approach obviates the need to download and store very large data files. It works in anywhere an internet connection is available, though best performance can be achieved on a high-bandwidth or local area network.</p>
 <section id="account-keys-and-settings" class="level2">
 <h2 class="anchored" data-anchor-id="account-keys-and-settings">Account keys and settings</h2>
