@@ -11,10 +11,11 @@ website:
     contents:
       - section: "Basics"
         contents:
-          - href: index.qmd
+          - file: index.qmd
             icon: house
-          - title: Catalog
-            icon: book
+            text: About
+          - icon: book
+            text: Catalog
             href: https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/catalog.json?.language=en
           - examples.qmd
 

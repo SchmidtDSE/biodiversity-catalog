@@ -1,5 +1,5 @@
 ---
-title: "Biodiversity Dataset Catalog"
+title: "About the Biodiversity Dataset Catalog"
 format: html
 ---
 
