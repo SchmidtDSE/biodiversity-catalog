@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "biodiversity-datasets.html",
+    "href": "biodiversity-datasets.html",
+    "title": "",
+    "section": "",
+    "text": "https://planetarycomputer.microsoft.com/dataset/io-biodiversity\n\noptimized cloud source? Yes (STAC + COG + cloud host)\npublic access? Yes\nLicense: CC-BY"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#iucn-range-maps-redlist-categories",
+    "href": "biodiversity-datasets.html#iucn-range-maps-redlist-categories",
+    "title": "",
+    "section": "IUCN Range maps / Redlist categories",
+    "text": "IUCN Range maps / Redlist categories\n\nFrom: https://www.iucnredlist.org/resources/spatial-data-download\nMAMMALS.zip ESRI shapefile, 2023-05-02\nREPTILES.zip ESRI shapefile, 2023-05-02\nAMPHIBIANS.zip ESRI shapefile 2023-05-02\nPLANTS.zip ESRI shapefile, 2023-05-02\nREEF_FORMING_CORALS.zip ESRI shapefile, 2023-05-02\nWRASSES_PARROTFISHES.zip ESRI shapefile, 2023-05-02\n\n\nIUCN Aves data comes from Birds of the World, through a separate request process.\n\nbirds/BOTW.gdb ESRI GDB database file, 2023-05-11"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#carbon",
+    "href": "biodiversity-datasets.html#carbon",
+    "title": "",
+    "section": "Carbon",
+    "text": "Carbon\n\npaper: https://doi.org/10.1038/s41893-021-00803-6\ndownload: https://doi.org/10.5281/zenodo.4091028\nweb: https://irrecoverable.resilienceatlas.org/map\n\nData mirror: cloud-optimized geotif\n\ncarbon/Irrecoverable_Carbon_2010/\n\nIrrecoverable_C_Biomass_2010.tif\nIrrecoverable_C_Soil_2010.tif\nIrrecoverable_C_Total_2010.tif\n\n\nand corresponding same three COG files for:\n\ncarbon/Irrecoverable_Carbon_2018/\ncarbon/Manageable_Carbon_2010/\ncarbon/Manageable_Carbon_2018/\ncarbon/Vulnerable_Carbon_2010/\ncarbon/Vulnerable_Carbon_2018/"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#global-mangrove-watch",
+    "href": "biodiversity-datasets.html#global-mangrove-watch",
+    "title": "",
+    "section": "Global Mangrove Watch",
+    "text": "Global Mangrove Watch\nhttps://www.globalmangrovewatch.org/\nHas spatial data layers for:\n\nMangrove Habitat Extent\nMangrove Net Change\nMangrove Alerts\nMangrove Restoration\nMangrove Biomass\nMangrove Height\nMangrove Blue Carbon\n\nsee:\n\nhttps://www.mangrovealliance.org/about-us/\nhttps://doi.org/10.5281/zenodo.1469347\n\nMuch more data in Google bucket storage: https://console.cloud.google.com/storage/browser/mangrove_atlas\nS3 products as well, e.g. \n\nhttps://datadownload-production.s3.amazonaws.com/GMW_v3_2015.zip (or in S3 notation:)\ns3://datadownload-production/GMW_v3_2015.zip\n\nlikewise:\n\nGMW_v3_2016.zip\nGMW_v3_2017.zip\nGMW_v3_2019.zip\nGMW_v3_2020.zip\n\n(note 2018 is missing)\nLocalized copies on biodiversity bucket"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#world-protected-areas",
+    "href": "biodiversity-datasets.html#world-protected-areas",
+    "title": "",
+    "section": "World Protected Areas",
+    "text": "World Protected Areas\nSource site: https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA license: non-commercial https://www.protectedplanet.net/en/legal human-mediated request required: No\n\nWorld-Protected-Areas-May2023.gdb\n\nmaybe also WDOECMs (https://www.protectedplanet.net/en/thematic-areas/oecms?tab=OECMs)"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#key-biodiversity-areas-kbas",
+    "href": "biodiversity-datasets.html#key-biodiversity-areas-kbas",
+    "title": "",
+    "section": "Key Biodiversity Areas (KBAs)",
+    "text": "Key Biodiversity Areas (KBAs)"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#ecoregions",
+    "href": "biodiversity-datasets.html#ecoregions",
+    "title": "",
+    "section": "EcoRegions",
+    "text": "EcoRegions\nPublicly accessible, CC-BY zip:\nhttps://storage.googleapis.com/teow2016/Ecoregions2017.zip\nhttps://developers.google.com/earth-engine/datasets/catalog/RESOLVE_ECOREGIONS_2017\nResolve 2017 EcoRegions data - Web App https://ecoregions2017.appspot.com/ - Earth Engine entry: https://developers.google.com/earth-engine/datasets/catalog/RESOLVE_ECOREGIONS_2017\nLocal snapshot:"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#predicts",
+    "href": "biodiversity-datasets.html#predicts",
+    "title": "",
+    "section": "PREDICTS",
+    "text": "PREDICTS\n\nref:"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#biotime",
+    "href": "biodiversity-datasets.html#biotime",
+    "title": "",
+    "section": "BioTIME",
+    "text": "BioTIME"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#lpi",
+    "href": "biodiversity-datasets.html#lpi",
+    "title": "",
+    "section": "LPI",
+    "text": "LPI"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#gbif",
+    "href": "biodiversity-datasets.html#gbif",
+    "title": "",
+    "section": "GBIF",
+    "text": "GBIF"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#ebird",
+    "href": "biodiversity-datasets.html#ebird",
+    "title": "",
+    "section": "eBird",
+    "text": "eBird"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#movebank",
+    "href": "biodiversity-datasets.html#movebank",
+    "title": "",
+    "section": "MoveBank",
+    "text": "MoveBank\n\nRelevant abiotic environment / climate layers:"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "access",
+    "section": "",
+    "text": "This Biodiversity Dataset Catalog seeks to make a range of biodiversty data more readily findable, accessible and interoperable (see FAIR principles), while in a manner consistent with data sovereignty and ethics (CARE principles). Data products listed here support access with portable, cloud native, high-performance protocols that avoid the need to download entire data files. When existing data providers already meet these objectives, those sources are simply linked from the catalog. Other sources are mirrored on a local object store based on an open source software platform which supports the widely used S3 API for cloud-native operations (MINIO). Access to mirrored content may require access keys to meet licensing and re-distribution policies of certain data providers. The entire setup, including catalog and object store, can be easily replicated on commodity hardware using only open source tools."
+  },
+  {
+    "objectID": "index.html#account-keys-and-settings",
+    "href": "index.html#account-keys-and-settings",
+    "title": "access",
+    "section": "Account keys and settings",
+    "text": "Account keys and settings\nAccess keys are required for data that is mirrored on the DSE cloud object store and for which licensing requirements prohibit re-distribution. Enter your AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in ~/.aws/credentials file or as environmental variables.\nTo let the software know that data is not hosted on AWS but rather, at an independent object store, we must specify the domain of the new location as AWS_S3_ENDPOINT environmental variable, and indicate that our system does not use ‘virtual hosting’ style paths, AWS_VIRTUAL_HOSTING=FALSE. Environmental variables can be set in ~/.bashrc (most platforms) or .Renviron file (for RStudio users)); though for clarity we will show how they can be set directly in python or R. See GDAL VFS documentation for details.\nSome data linked in this catalog is already available from public cloud-based object stores such as Azure, Google Storage, or AWS. Note that the former two require their own virtual filesystem prefixes, /vsiaz/ and /vsigs respectively, as described in the docs."
+  },
+  {
+    "objectID": "index.html#python",
+    "href": "index.html#python",
+    "title": "access",
+    "section": "Python",
+    "text": "Python\n\nimport os\nos.environ[\"AWS_NO_SIGN_REQUEST\"]=\"TRUE\" # anonymous access for public buckets\nos.environ[\"AWS_S3_ENDPOINT\"]=\"minio.carlboettiger.info\"\nos.environ[\"AWS_VIRTUAL_HOSTING\"]=\"FALSE\"\n\nWe can then read in raster or vector files using the GDAL virtual filesystem (VFS) URLs given in the catalog (click the button to copy the URL to your clipbard)\n\nimport rioxarray\n\nvfs_url = \"/vsis3/public-biodiversity/carbon/Irrecoverable_Carbon_2018/Irrecoverable_C_Total_2018.tif\"\n\nr = rioxarray.open_rasterio(vfs_url)"
+  },
+  {
+    "objectID": "index.html#r",
+    "href": "index.html#r",
+    "title": "access",
+    "section": "R",
+    "text": "R\nThis process is nearly identical using any of the popular spatial frameworks in R, e.g. terra, stars, or sf.\n\nSys.setenv(\"AWS_NO_SIGN_REQUEST\"=\"TRUE\")\nSys.setenv(\"AWS_S3_ENDPOINT\"=\"minio.carlboettiger.info\")\nSys.setenv(\"AWS_VIRTUAL_HOSTING\"=\"FALSE\")\n\n\nlibrary(terra)\n\nterra 1.7.29\n\nvfs_url = \"/vsis3/public-biodiversity/carbon/Irrecoverable_Carbon_2018/Irrecoverable_C_Total_2018.tif\"\nr = rast(vfs_url)"
+  },
+  {
+    "objectID": "index.html#gdal-and-lazy-evaluation",
+    "href": "index.html#gdal-and-lazy-evaluation",
+    "title": "access",
+    "section": "GDAL and lazy evaluation",
+    "text": "GDAL and lazy evaluation\nIt is worth becoming familiar with support for GDAL’s lazy evaluation mechanisms in your preferred client platform. These can allow you to subset, crop, re-sample, and transform your data over the remote network connection, which can improve computational speed and saves available disk and RAM space. Illustrative examples of this in R and python are provided in the example notebooks on this site."
+  },
+  {
+    "objectID": "index.html#categories-of-data-access",
+    "href": "index.html#categories-of-data-access",
+    "title": "access",
+    "section": "Categories of Data Access",
+    "text": "Categories of Data Access\nDatasets included in this catalog fall into several different categories of access:\n\nData that is publicly available from a high-bandwidth source in optimized format.\nData that is freely available under permissive licenses, but only from low-bandwidth hosts or in non-optimized formats. Data shared on scientific data repositories such as Zenodo usually fall in this category.\nData that is freely available but under restricted use, typically requiring a request (automated or manual). Such distributors often also have low-bandwidth distribution and formats of category 2.\nData that is shared only privately or under explicit non-disclosure contracts.\nSensitive or sovereign data which can only be stored in approved geographic regions or accessed only from secure systems.\n\nThis catalog seeks to help research teams bridge across these diverse types and needs in biodiversity data while respecting necessary restrictions of each category using distributed and open source tooling."
+  }
+]
