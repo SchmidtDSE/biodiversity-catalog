@@ -1,1 +1,1 @@
-Sitemap: https://github.com/boettiger-lab/biodiversity-catalog/sitemap.xml
+Sitemap: https://github.com/SchmidtDSE/biodiversity-catalog/sitemap.xml

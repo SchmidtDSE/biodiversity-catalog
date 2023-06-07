@@ -2,91 +2,98 @@
   {
     "objectID": "biodiversity-datasets.html",
     "href": "biodiversity-datasets.html",
-    "title": "",
+    "title": "Global Priority Areas",
+    "section": "",
+    "text": "https://planetarycomputer.microsoft.com/dataset/io-biodiversity\n\noptimized cloud source? Yes (STAC + COG + cloud host)\npublic access? Yes\nLicense: CC-BY"
+  },
+  {
+    "objectID": "biodiversity-datasets.html#io-biodiversity",
+    "href": "biodiversity-datasets.html#io-biodiversity",
+    "title": "Global Priority Areas",
     "section": "",
     "text": "https://planetarycomputer.microsoft.com/dataset/io-biodiversity\n\noptimized cloud source? Yes (STAC + COG + cloud host)\npublic access? Yes\nLicense: CC-BY"
   },
   {
     "objectID": "biodiversity-datasets.html#iucn-range-maps-redlist-categories",
     "href": "biodiversity-datasets.html#iucn-range-maps-redlist-categories",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "IUCN Range maps / Redlist categories",
     "text": "IUCN Range maps / Redlist categories\n\nFrom: https://www.iucnredlist.org/resources/spatial-data-download\nMAMMALS.zip ESRI shapefile, 2023-05-02\nREPTILES.zip ESRI shapefile, 2023-05-02\nAMPHIBIANS.zip ESRI shapefile 2023-05-02\nPLANTS.zip ESRI shapefile, 2023-05-02\nREEF_FORMING_CORALS.zip ESRI shapefile, 2023-05-02\nWRASSES_PARROTFISHES.zip ESRI shapefile, 2023-05-02\n\n\nIUCN Aves data comes from Birds of the World, through a separate request process.\n\nbirds/BOTW.gdb ESRI GDB database file, 2023-05-11"
   },
   {
     "objectID": "biodiversity-datasets.html#carbon",
     "href": "biodiversity-datasets.html#carbon",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "Carbon",
     "text": "Carbon\n\npaper: https://doi.org/10.1038/s41893-021-00803-6\ndownload: https://doi.org/10.5281/zenodo.4091028\nweb: https://irrecoverable.resilienceatlas.org/map\n\nData mirror: cloud-optimized geotif\n\ncarbon/Irrecoverable_Carbon_2010/\n\nIrrecoverable_C_Biomass_2010.tif\nIrrecoverable_C_Soil_2010.tif\nIrrecoverable_C_Total_2010.tif\n\n\nand corresponding same three COG files for:\n\ncarbon/Irrecoverable_Carbon_2018/\ncarbon/Manageable_Carbon_2010/\ncarbon/Manageable_Carbon_2018/\ncarbon/Vulnerable_Carbon_2010/\ncarbon/Vulnerable_Carbon_2018/"
   },
   {
     "objectID": "biodiversity-datasets.html#global-mangrove-watch",
     "href": "biodiversity-datasets.html#global-mangrove-watch",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "Global Mangrove Watch",
     "text": "Global Mangrove Watch\nhttps://www.globalmangrovewatch.org/\nHas spatial data layers for:\n\nMangrove Habitat Extent\nMangrove Net Change\nMangrove Alerts\nMangrove Restoration\nMangrove Biomass\nMangrove Height\nMangrove Blue Carbon\n\nsee:\n\nhttps://www.mangrovealliance.org/about-us/\nhttps://doi.org/10.5281/zenodo.1469347\n\nMuch more data in Google bucket storage: https://console.cloud.google.com/storage/browser/mangrove_atlas\nS3 products as well, e.g. \n\nhttps://datadownload-production.s3.amazonaws.com/GMW_v3_2015.zip (or in S3 notation:)\ns3://datadownload-production/GMW_v3_2015.zip\n\nlikewise:\n\nGMW_v3_2016.zip\nGMW_v3_2017.zip\nGMW_v3_2019.zip\nGMW_v3_2020.zip\n\n(note 2018 is missing)\nLocalized copies on biodiversity bucket"
   },
   {
     "objectID": "biodiversity-datasets.html#world-protected-areas",
     "href": "biodiversity-datasets.html#world-protected-areas",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "World Protected Areas",
     "text": "World Protected Areas\nSource site: https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA license: non-commercial https://www.protectedplanet.net/en/legal human-mediated request required: No\n\nWorld-Protected-Areas-May2023.gdb\n\nmaybe also WDOECMs (https://www.protectedplanet.net/en/thematic-areas/oecms?tab=OECMs)"
   },
   {
     "objectID": "biodiversity-datasets.html#key-biodiversity-areas-kbas",
     "href": "biodiversity-datasets.html#key-biodiversity-areas-kbas",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "Key Biodiversity Areas (KBAs)",
     "text": "Key Biodiversity Areas (KBAs)"
   },
   {
     "objectID": "biodiversity-datasets.html#ecoregions",
     "href": "biodiversity-datasets.html#ecoregions",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "EcoRegions",
     "text": "EcoRegions\nPublicly accessible, CC-BY zip:\nhttps://storage.googleapis.com/teow2016/Ecoregions2017.zip\nhttps://developers.google.com/earth-engine/datasets/catalog/RESOLVE_ECOREGIONS_2017\nResolve 2017 EcoRegions data - Web App https://ecoregions2017.appspot.com/ - Earth Engine entry: https://developers.google.com/earth-engine/datasets/catalog/RESOLVE_ECOREGIONS_2017\nLocal snapshot:"
   },
   {
     "objectID": "biodiversity-datasets.html#predicts",
     "href": "biodiversity-datasets.html#predicts",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "PREDICTS",
     "text": "PREDICTS\n\nref:"
   },
   {
     "objectID": "biodiversity-datasets.html#biotime",
     "href": "biodiversity-datasets.html#biotime",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "BioTIME",
     "text": "BioTIME"
   },
   {
     "objectID": "biodiversity-datasets.html#lpi",
     "href": "biodiversity-datasets.html#lpi",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "LPI",
     "text": "LPI"
   },
   {
     "objectID": "biodiversity-datasets.html#gbif",
     "href": "biodiversity-datasets.html#gbif",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "GBIF",
     "text": "GBIF"
   },
   {
     "objectID": "biodiversity-datasets.html#ebird",
     "href": "biodiversity-datasets.html#ebird",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "eBird",
     "text": "eBird"
   },
   {
     "objectID": "biodiversity-datasets.html#movebank",
     "href": "biodiversity-datasets.html#movebank",
-    "title": "",
+    "title": "Global Priority Areas",
     "section": "MoveBank",
     "text": "MoveBank\n\nRelevant abiotic environment / climate layers:"
   },
