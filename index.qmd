@@ -26,7 +26,7 @@ Some data linked in this catalog is already available from public cloud-based ob
 
 ```{python}
 import os
-os.environ["AWS_NO_SIGN_REQUESTS"]="TRUE" # anonymous access for public buckets
+os.environ["AWS_NO_SIGN_REQUEST"]="TRUE" # anonymous access for public buckets
 os.environ["AWS_S3_ENDPOINT"]="minio.carlboettiger.info"
 os.environ["AWS_VIRTUAL_HOSTING"]="FALSE"
 ```
@@ -47,7 +47,7 @@ r = rioxarray.open_rasterio(vfs_url)
 This process is nearly identical using any of the popular spatial frameworks in R, e.g. `terra`, `stars`, or `sf`.  
 
 ```{r}
-Sys.setenv("AWS_NO_SIGN_REQUESTS"="TRUE")
+Sys.setenv("AWS_NO_SIGN_REQUEST"="TRUE")
 Sys.setenv("AWS_S3_ENDPOINT"="minio.carlboettiger.info")
 Sys.setenv("AWS_VIRTUAL_HOSTING"="FALSE")
 ```
