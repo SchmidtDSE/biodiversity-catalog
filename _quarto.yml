@@ -11,7 +11,7 @@ website:
     contents:
       - section: "Basics"
         contents:
-          - index.qmd
+          - href: index.qmd
             icon: house
           - title: Catalog
             icon: book
