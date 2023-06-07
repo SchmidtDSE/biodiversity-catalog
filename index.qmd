@@ -1,17 +1,15 @@
 ---
-title: "access"
+title: "Biodiversity Dataset Catalog"
 format: html
 ---
 
-This Biodiversity Dataset Catalog seeks to make a range of biodiversty data more readily findable, accessible and interoperable (see [FAIR principles](https://www.go-fair.org/fair-principles/)), while in a manner consistent with data sovereignty and ethics ([CARE principles](https://www.gida-global.org/care)).  Data products listed here support access with portable, cloud native, high-performance protocols that avoid the need to download entire data files. When existing data providers already meet these objectives, those sources are simply linked from the catalog. Other sources are mirrored on a local object store based on an open source software platform which supports the widely used S3 API for cloud-native operations  ([MINIO](https://min.io/)).  Access to mirrored content may require [access keys](access_keys.html) to meet licensing and re-distribution policies of certain data providers. The entire setup, including catalog and object store, can be easily replicated on commodity hardware using only open source tools. 
+# Overview
 
+Our [Biodiversity Dataset Catalog](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/catalog.json?.language=en) seeks to make a range of biodiversty data more readily findable, accessible and interoperable (see [FAIR principles](https://www.go-fair.org/fair-principles/)), while in a manner consistent with data sovereignty and ethics ([CARE principles](https://www.gida-global.org/care)).  Data products listed here support access with portable, cloud native, high-performance protocols that avoid the need to download entire data files. When existing data providers already meet these objectives, those sources are simply linked from the catalog. Other sources are mirrored on a local object store based on an open source software platform which supports the widely used S3 API for cloud-native operations  ([MINIO](https://min.io/)).  Access to mirrored content may require [access keys](access_keys.html) to meet licensing and re-distribution policies of certain data providers. The entire setup, including catalog and object store, can be easily replicated on commodity hardware using only open source tools. 
 
-
-# Cloud-native protocols
-
+# Data Access
 
 Large geospatial raster and vector data can best be accessed with 'cloud-native' protocols such as the [virtual filesystem in GDAL](https://gdal.org/user/virtual_file_systems.html), a popular C(++) library widely used to power various open source geospatial applications. This approach obviates the need to download and store very large data files. It works in anywhere an internet connection is available, though best performance can be achieved on a high-bandwidth or local area network.
-
 
 ## Account keys and settings
 
