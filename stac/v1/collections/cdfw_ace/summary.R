@@ -16,10 +16,10 @@ unlink(xl)
 names(df) <- c("href", "title", "description")
 assets <- 
   df |> 
-  mutate(href = paste0("/vsis3/",
+  mutate(href = paste0("/vsicurl/", "https://minio.carlboettiger.info/",
                        "public-biodiversity/",
                        "ACE_summary/", href, ".gdb"),
-         description = paste0("public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <",
+         description = paste0("public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <",
                               description, ">"),
          roles = list("data")) |>
   toJSON(pretty = TRUE)

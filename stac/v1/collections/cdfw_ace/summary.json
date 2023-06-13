@@ -43,121 +43,121 @@
   "title": "California Department of Fish and Wildlife (CDFW) Areas of Conservation Emphasis (ACE)",
   "assets": {
     "ds2769": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2769.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2769.gdb",
       "title": "Species Biodiversity",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <http://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=152834>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <http://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=152834>",
       "roles": [
         "data"
       ]
     },
     "ds2739": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2739.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2739.gdb",
       "title": "Terrestrial Biodiversity Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150831>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150831>",
       "roles": [
         "data"
       ]
     },
     "ds2703": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2703.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2703.gdb",
       "title": "Terrestrial Native Species Richness Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681>",
       "roles": [
         "data"
       ]
     },
     "ds2701": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2701.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2701.gdb",
       "title": "Terrestrial Climate Vulnerable Species",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681>",
       "roles": [
         "data"
       ]
     },
     "ds2702": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2702.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2702.gdb",
       "title": "Terrestrial Native Game Species",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681>",
       "roles": [
         "data"
       ]
     },
     "ds2709": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2709.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2709.gdb",
       "title": "Terrestrial Rare Species Richness Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150814>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150814>",
       "roles": [
         "data"
       ]
     },
     "ds2715": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2715.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2715.gdb",
       "title": "Terrestrial Irreplaceability Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150816>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150816>",
       "roles": [
         "data"
       ]
     },
     "ds2768": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2768.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2768.gdb",
       "title": "Aquatic Biodiversity Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150856>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150856>",
       "roles": [
         "data"
       ]
     },
     "ds2743": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2743.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2743.gdb",
       "title": "Aquatic Native Richness Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150852>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150852>",
       "roles": [
         "data"
       ]
     },
     "ds2748": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2748.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2748.gdb",
       "title": "Aquatic Rare Species Richness Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150853>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150853>",
       "roles": [
         "data"
       ]
     },
     "ds2752": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2752.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2752.gdb",
       "title": "Aquatic Irreplaceability Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150854>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150854>",
       "roles": [
         "data"
       ]
     },
     "ds2721": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2721.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2721.gdb",
       "title": "Terrestrial Significant Habitats Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150834>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150834>",
       "roles": [
         "data"
       ]
     },
     "ds2756": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2756.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2756.gdb",
       "title": "Aquatic Significant Habitats Summary",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150855>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150855>",
       "roles": [
         "data"
       ]
     },
     "ds2734": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2734.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2734.gdb",
       "title": "Terrestrial Connectivity",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150835>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150835>",
       "roles": [
         "data"
       ]
     },
     "ds2738": {
-      "href": "/vsis3/public-biodiversity/ACE_summary/ds2738.gdb",
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2738.gdb",
       "title": "Terrestrial Climate Change Resilience",
-      "description": "public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150836>",
+      "description": "public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150836>",
       "roles": [
         "data"
       ]
