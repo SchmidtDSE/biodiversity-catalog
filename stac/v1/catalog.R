@@ -26,7 +26,12 @@ catalog <- list(
       "type"= "application/json",
       "href"= "catalog.json"
     ),
-    
+    list(
+      "rel"= "child",
+      "type"= "application/json",
+      "title"= "CDFW Areas of Conservation Emphasis (ACE)",
+      "href"= "collections/cdfw_ace/collection.json"
+    ),  
     list(
       "rel"= "child",
       "type"= "application/json",
