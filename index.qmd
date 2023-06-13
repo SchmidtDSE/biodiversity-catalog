@@ -13,7 +13,7 @@ Large geospatial raster and vector data can best be accessed with 'cloud-native'
 
 ## Account keys and settings
 
-Access keys are required for data that is mirrored on the DSE cloud object store and for which licensing requirements prohibit re-distribution. Enter your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in `~/.aws/credentials` file or as environmental variables.
+Access keys are required for data that is mirrored on the DSE cloud object store and for which licensing requirements prohibit re-distribution. Enter your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in `~/.aws/credentials` file or as environmental variables.  Some objects mirrored to the DSE object store are not subject to licenses preventing redistribution, and are made available on public buckets.  These can be accessed with empty key/secret credentials, or by setting `AWS_NO_SIGN_REQUEST=FALSE`.
 
 To let the software know that data is not hosted on AWS but rather, at an independent object store, we must specify the domain of the new location as `AWS_S3_ENDPOINT` environmental variable, and indicate that our system does not use 'virtual hosting' style paths, `AWS_VIRTUAL_HOSTING=FALSE`. Environmental variables can be set in `~/.bashrc` (most platforms) or `.Renviron` file (for RStudio users)); though for clarity we will show how they can be set directly in python or R.  See [GDAL VFS documentation](https://gdal.org/user/virtual_file_systems.html#vsis3) for details.
 
@@ -45,7 +45,7 @@ r = rioxarray.open_rasterio(vfs_url)
 This process is nearly identical using any of the popular spatial frameworks in R, e.g. `terra`, `stars`, or `sf`.  
 
 ```{r}
-Sys.setenv("AWS_NO_SIGN_REQUEST"="TRUE")
+Sys.setenv("AWS_NO_SIGN_REQUEST"="TRUE") # set FALSE when password is required
 Sys.setenv("AWS_S3_ENDPOINT"="minio.carlboettiger.info")
 Sys.setenv("AWS_VIRTUAL_HOSTING"="FALSE")
 ```

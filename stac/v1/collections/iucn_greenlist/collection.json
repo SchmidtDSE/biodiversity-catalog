@@ -5,17 +5,20 @@
     {
       "rel": "parent",
       "type": "application/json",
+      "title": "DSE Biodiversity Catalog",
       "href": "../../catalog.json"
     },
     {
       "rel": "root",
       "type": "application/json",
+      "title": "DSE Biodiversity Catalog",
       "href": "../../catalog.json"
     },
     {
       "rel": "self",
       "type": "application/json",
-      "href": "iucn_greenlist.json"
+      "href": "iucn_greenlist.json",
+      "title": "ICUN Green List"
     },
     {
       "rel": "license",
@@ -41,7 +44,7 @@
       ]
     },
     "spatial-polygons": {
-      "href": "/vsis3/biodiversity/iucn_greenlist-June2023.gdb",
+      "href": "s3://biodiversity/iucn_greenlist-June2023.gdb",
       "title": "Geodatabase format",
       "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>."
     }

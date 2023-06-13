@@ -122,6 +122,18 @@
       "type": "application/json",
       "title": "ESA Climate Change Initiative Land Cover Maps (Cloud Optimized GeoTIFF)",
       "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-cci-lc"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "Chloris Woody Biomass",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/chloris-biomass"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "Forest Inventory and Analysis",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/fia"
     }
   ]
 }

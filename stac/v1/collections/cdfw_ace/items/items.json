@@ -1,0 +1,829 @@
+{
+  "id": "cdfw_ace_summary",
+  "type": "Feature",
+  "collection": "cdfw_ace",
+  "links": [
+    {
+      "rel": "collection",
+      "title": "CDFW ACE",
+      "type": "application/json",
+      "href": "../collection.json"
+    },
+    {
+      "rel": "parent",
+      "title": "CDFW ACE",
+      "type": "application/json",
+      "href": "../collection.json"
+    },
+    {
+      "rel": "root",
+      "title": "DSE Biodiversity Catalog",
+      "type": "application/json",
+      "href": "../../../catalog.json"
+    },
+    {
+      "rel": "self",
+      "title": "CDFW ACE",
+      "type": "application/json",
+      "href": "items.json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "type": "text/html",
+      "title": "License"
+    },
+    {
+      "rel": "about",
+      "href": "https://wildlife.ca.gov/Data/Analysis/Ace",
+      "type": "text/html",
+      "title": "California Areas of Conservation Emphasis"
+    }
+  ],
+  "title": "California Department of Fish and Wildlife (CDFW) Areas of Conservation Emphasis (ACE)",
+  "assets": {
+    "ds2769": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2769.gdb",
+      "title": "Species Biodiversity",
+      "description": "http://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=152834",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2739": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2739.gdb",
+      "title": "Terrestrial Biodiversity Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150831",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2703": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2703.gdb",
+      "title": "Terrestrial Native Species Richness Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2701": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2701.gdb",
+      "title": "Terrestrial Climate Vulnerable Species",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2702": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2702.gdb",
+      "title": "Terrestrial Native Game Species",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150681",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2709": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2709.gdb",
+      "title": "Terrestrial Rare Species Richness Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150814",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2715": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2715.gdb",
+      "title": "Terrestrial Irreplaceability Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150816",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2768": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2768.gdb",
+      "title": "Aquatic Biodiversity Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150856",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2743": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2743.gdb",
+      "title": "Aquatic Native Richness Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150852",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2748": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2748.gdb",
+      "title": "Aquatic Rare Species Richness Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150853",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2752": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2752.gdb",
+      "title": "Aquatic Irreplaceability Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150854",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2721": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2721.gdb",
+      "title": "Terrestrial Significant Habitats Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150834",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2756": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2756.gdb",
+      "title": "Aquatic Significant Habitats Summary",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150855",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2734": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2734.gdb",
+      "title": "Terrestrial Connectivity",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150835",
+      "roles": [
+        "data"
+      ]
+    },
+    "ds2738": {
+      "href": "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2738.gdb",
+      "title": "Terrestrial Climate Change Resilience",
+      "description": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=150836",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -118.6034,
+            33.4781
+          ],
+          [
+            -118.3683,
+            33.4071
+          ],
+          [
+            -118.3102,
+            33.3358
+          ],
+          [
+            -118.4654,
+            33.3261
+          ],
+          [
+            -118.4887,
+            33.4198
+          ],
+          [
+            -118.6034,
+            33.4781
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            -118.6055,
+            33.031
+          ],
+          [
+            -118.37,
+            32.8393
+          ],
+          [
+            -118.4963,
+            32.8516
+          ],
+          [
+            -118.6055,
+            33.031
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            -119.9192,
+            34.0773
+          ],
+          [
+            -119.7555,
+            34.0567
+          ],
+          [
+            -119.7212,
+            33.9596
+          ],
+          [
+            -119.8734,
+            33.9804
+          ],
+          [
+            -119.9192,
+            34.0773
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            -120.2474,
+            34.0019
+          ],
+          [
+            -120.0736,
+            34.0245
+          ],
+          [
+            -119.9737,
+            33.9425
+          ],
+          [
+            -120.1218,
+            33.8957
+          ],
+          [
+            -120.2474,
+            34.0019
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            -124.2116,
+            41.9985
+          ],
+          [
+            -123.3476,
+            41.9991
+          ],
+          [
+            -122.3782,
+            42.0095
+          ],
+          [
+            -121.5809,
+            41.9987
+          ],
+          [
+            -121.0352,
+            41.9933
+          ],
+          [
+            -119.9992,
+            41.9945
+          ],
+          [
+            -119.9999,
+            41.184
+          ],
+          [
+            -119.9959,
+            40.4999
+          ],
+          [
+            -119.9976,
+            39.9565
+          ],
+          [
+            -120.0057,
+            39.2252
+          ],
+          [
+            -120.001,
+            38.9996
+          ],
+          [
+            -119.5877,
+            38.7147
+          ],
+          [
+            -118.7719,
+            38.1419
+          ],
+          [
+            -117.8759,
+            37.4973
+          ],
+          [
+            -117.3759,
+            37.1268
+          ],
+          [
+            -116.542,
+            36.5
+          ],
+          [
+            -115.7508,
+            35.8893
+          ],
+          [
+            -115.2713,
+            35.5127
+          ],
+          [
+            -114.6335,
+            35.0019
+          ],
+          [
+            -114.6307,
+            34.8664
+          ],
+          [
+            -114.4716,
+            34.713
+          ],
+          [
+            -114.3426,
+            34.4514
+          ],
+          [
+            -114.1383,
+            34.3032
+          ],
+          [
+            -114.2541,
+            34.1738
+          ],
+          [
+            -114.4159,
+            34.1076
+          ],
+          [
+            -114.4603,
+            33.9966
+          ],
+          [
+            -114.5337,
+            33.9261
+          ],
+          [
+            -114.4965,
+            33.6969
+          ],
+          [
+            -114.5589,
+            33.5318
+          ],
+          [
+            -114.6296,
+            33.4281
+          ],
+          [
+            -114.7229,
+            33.3988
+          ],
+          [
+            -114.677,
+            33.2702
+          ],
+          [
+            -114.7079,
+            33.0974
+          ],
+          [
+            -114.6708,
+            33.038
+          ],
+          [
+            -114.5061,
+            33.017
+          ],
+          [
+            -114.469,
+            32.8452
+          ],
+          [
+            -114.5391,
+            32.7569
+          ],
+          [
+            -114.7196,
+            32.7188
+          ],
+          [
+            -116.0466,
+            32.6234
+          ],
+          [
+            -117.1249,
+            32.5342
+          ],
+          [
+            -117.1395,
+            32.6271
+          ],
+          [
+            -117.2461,
+            32.6694
+          ],
+          [
+            -117.2517,
+            32.8743
+          ],
+          [
+            -117.3284,
+            33.1218
+          ],
+          [
+            -117.5057,
+            33.3341
+          ],
+          [
+            -117.7849,
+            33.5415
+          ],
+          [
+            -117.9271,
+            33.6055
+          ],
+          [
+            -118.0889,
+            33.7298
+          ],
+          [
+            -118.2587,
+            33.7037
+          ],
+          [
+            -118.4112,
+            33.742
+          ],
+          [
+            -118.3921,
+            33.8409
+          ],
+          [
+            -118.5195,
+            34.0275
+          ],
+          [
+            -118.745,
+            34.0321
+          ],
+          [
+            -118.8051,
+            34.0012
+          ],
+          [
+            -119.2164,
+            34.1461
+          ],
+          [
+            -119.2701,
+            34.2529
+          ],
+          [
+            -119.461,
+            34.3741
+          ],
+          [
+            -119.5595,
+            34.4134
+          ],
+          [
+            -119.874,
+            34.4088
+          ],
+          [
+            -120.0081,
+            34.4604
+          ],
+          [
+            -120.1412,
+            34.4734
+          ],
+          [
+            -120.4714,
+            34.4478
+          ],
+          [
+            -120.5114,
+            34.523
+          ],
+          [
+            -120.6457,
+            34.581
+          ],
+          [
+            -120.602,
+            34.6921
+          ],
+          [
+            -120.6374,
+            34.7559
+          ],
+          [
+            -120.6099,
+            34.8428
+          ],
+          [
+            -120.6708,
+            34.9041
+          ],
+          [
+            -120.6299,
+            35.0615
+          ],
+          [
+            -120.6989,
+            35.1712
+          ],
+          [
+            -120.7861,
+            35.1777
+          ],
+          [
+            -120.8968,
+            35.2479
+          ],
+          [
+            -120.8692,
+            35.4033
+          ],
+          [
+            -121.0034,
+            35.4607
+          ],
+          [
+            -121.1667,
+            35.6354
+          ],
+          [
+            -121.285,
+            35.6741
+          ],
+          [
+            -121.3324,
+            35.7831
+          ],
+          [
+            -121.4623,
+            35.8856
+          ],
+          [
+            -121.5031,
+            36.0003
+          ],
+          [
+            -121.5746,
+            36.0252
+          ],
+          [
+            -121.7172,
+            36.1951
+          ],
+          [
+            -121.8137,
+            36.2342
+          ],
+          [
+            -121.8947,
+            36.3178
+          ],
+          [
+            -121.9416,
+            36.4856
+          ],
+          [
+            -121.9239,
+            36.6346
+          ],
+          [
+            -121.8251,
+            36.6572
+          ],
+          [
+            -121.7883,
+            36.804
+          ],
+          [
+            -121.8623,
+            36.9316
+          ],
+          [
+            -122.106,
+            36.956
+          ],
+          [
+            -122.2062,
+            37.0139
+          ],
+          [
+            -122.4051,
+            37.1958
+          ],
+          [
+            -122.4009,
+            37.3592
+          ],
+          [
+            -122.4521,
+            37.4805
+          ],
+          [
+            -122.5167,
+            37.5213
+          ],
+          [
+            -122.4968,
+            37.6864
+          ],
+          [
+            -122.5145,
+            37.7808
+          ],
+          [
+            -122.4075,
+            37.8114
+          ],
+          [
+            -122.3602,
+            37.5925
+          ],
+          [
+            -122.1401,
+            37.5079
+          ],
+          [
+            -122.163,
+            37.6679
+          ],
+          [
+            -122.3308,
+            37.7838
+          ],
+          [
+            -122.31,
+            37.8928
+          ],
+          [
+            -122.4137,
+            37.9373
+          ],
+          [
+            -122.3689,
+            38.0079
+          ],
+          [
+            -122.2629,
+            38.0446
+          ],
+          [
+            -122.3936,
+            38.1434
+          ],
+          [
+            -122.4913,
+            38.1081
+          ],
+          [
+            -122.4765,
+            37.8325
+          ],
+          [
+            -122.5292,
+            37.819
+          ],
+          [
+            -122.6565,
+            37.9045
+          ],
+          [
+            -122.7026,
+            37.8938
+          ],
+          [
+            -122.8214,
+            37.9967
+          ],
+          [
+            -122.9397,
+            38.0319
+          ],
+          [
+            -122.9686,
+            38.2429
+          ],
+          [
+            -123.1288,
+            38.4504
+          ],
+          [
+            -123.3319,
+            38.5655
+          ],
+          [
+            -123.4418,
+            38.6997
+          ],
+          [
+            -123.7254,
+            38.9174
+          ],
+          [
+            -123.694,
+            39.0574
+          ],
+          [
+            -123.8038,
+            39.2788
+          ],
+          [
+            -123.8263,
+            39.3687
+          ],
+          [
+            -123.7665,
+            39.5528
+          ],
+          [
+            -123.8517,
+            39.832
+          ],
+          [
+            -124.1105,
+            40.1038
+          ],
+          [
+            -124.1879,
+            40.1305
+          ],
+          [
+            -124.3634,
+            40.261
+          ],
+          [
+            -124.3479,
+            40.3146
+          ],
+          [
+            -124.4096,
+            40.4381
+          ],
+          [
+            -124.3294,
+            40.6164
+          ],
+          [
+            -124.1583,
+            40.8761
+          ],
+          [
+            -124.1122,
+            41.0282
+          ],
+          [
+            -124.1536,
+            41.0536
+          ],
+          [
+            -124.0631,
+            41.4396
+          ],
+          [
+            -124.1435,
+            41.7093
+          ],
+          [
+            -124.256,
+            41.783
+          ],
+          [
+            -124.2196,
+            41.8464
+          ],
+          [
+            -124.2116,
+            41.9985
+          ]
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -124,
+    -114,
+    -32,
+    42
+  ],
+  "properties": {
+    "datetime": "2018-02-01T00:00:00Z"
+  },
+  "stac_version": "1.0.0"
+}

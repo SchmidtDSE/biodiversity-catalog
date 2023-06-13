@@ -9,17 +9,20 @@ collection <- list(
      list(
       "rel"= "parent",
       "type"= "application/json",
+      "title"= "DSE Biodiversity Catalog",
       "href"= "../../catalog.json"
     ),
     list(
       "rel"= "root",
       "type"= "application/json",
+      "title"= "DSE Biodiversity Catalog",
       "href"= "../../catalog.json"
     ),
     list(
       "rel"= "self",
       "type"= "application/json",
-      "href"= "mangroves.json"
+      "href"= "mangroves.json",
+      "title"="Global Mangrove Watch"
     ),
     list(
       "rel"= "license",

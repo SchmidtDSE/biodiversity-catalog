@@ -8,12 +8,14 @@ collection <- list(
      list(
       "rel"= "parent",
       "type"= "application/json",
+      "title"= "DSE Biodiversity Catalog",
       "href"= "../../catalog.json"
     ),
     list(
       "rel"= "root",
       "type"= "application/json",
-      "href"= "../../catalog.json"
+      "href"= "../../catalog.json",
+      title = "DSE Biodiversity Catalog"
     ),
     list(
       "rel"= "self",
@@ -66,7 +68,7 @@ collection <- list(
         ))
     )
   ),
-  "license"= "Public Domain",
+  "license"= "CC0",
   "keywords"= list(
     "NEON",
     "Biodiversity"
@@ -75,17 +77,17 @@ collection <- list(
     list(
       "url"= "https://neonscience.org",
       "name"= "National Ecological Observatory Network",
-      "roles"= list("processor")
+      "roles"= list("producer")
     ),
     list(
       "url"= "https://www.battelle.org/",
       "name"= "Battelle Memorial Institute",
-      "roles"= list("manager")
+      "roles"= list("processor", "host")
     ),
     list(
       "url"= "https://www.nsf.gov/",
       "name"= "National Science Foundation",
-      "roles"= list("funder")
+      "roles"= list("licensor")
     ),
     list(
       "url"= "https://cloud.google.com/storage",
@@ -107,6 +109,6 @@ collection <- list(
 
 
 path <- file.path("stac/v1/collections/neon/collection.json")
-jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE)
-# stac4cast::stac_validate(path)
+jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE, null="null")
+stac4cast::stac_validate(path)
 

@@ -8,17 +8,20 @@ collection <- list(
      list(
       "rel"= "parent",
       "type"= "application/json",
+      "title"= "DSE Biodiversity Catalog",
       "href"= "../../catalog.json"
     ),
     list(
       "rel"= "root",
       "type"= "application/json",
+      "title"= "DSE Biodiversity Catalog",
       "href"= "../../catalog.json"
     ),
     list(
       "rel"= "self",
       "type"= "application/json",
-      "href"= "iucn_greenlist.json"
+      "href"= "iucn_greenlist.json",
+      title = "ICUN Green List"
     ),
     list(
       "rel"= "license",
@@ -125,6 +128,6 @@ More than 50 countries have signed up to implement the IUCN Green List of Protec
 
 
 path <- file.path("stac/v1/collections/iucn_greenlist/collection.json")
-jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE)
-# stac4cast::stac_validate(path)
+jsonlite::write_json(collection, path, pretty=TRUE, auto_unbox=TRUE, null="null")
+stac4cast::stac_validate(path)
 

@@ -41,18 +41,18 @@
       "title": "Ecoregions 2017 thumbnail"
     },
     "flatgeobuf": {
-      "href": "/vsis3/public-biodiversity/Ecoregions2017.fgb",
+      "href": "s3://public-biodiversity/Ecoregions2017.fgb",
       "title": "Polygon data",
       "description": "S3 Bucket access (anonymous access permitted)",
       "roles": [
         "data"
       ],
       "alternate": {
-        "http": {
+        "local": {
           "title": "http access",
           "href": "https://minio.carlboettiger.info/public-biodiversity/Ecoregions2017.fgb"
         },
-        "http.1": {
+        "original": {
           "title": "Original Shapefile",
           "href": "https://storage.googleapis.com/teow2016/Ecoregions2017.zip"
         }

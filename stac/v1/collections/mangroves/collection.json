@@ -5,17 +5,20 @@
     {
       "rel": "parent",
       "type": "application/json",
+      "title": "DSE Biodiversity Catalog",
       "href": "../../catalog.json"
     },
     {
       "rel": "root",
       "type": "application/json",
+      "title": "DSE Biodiversity Catalog",
       "href": "../../catalog.json"
     },
     {
       "rel": "self",
       "type": "application/json",
-      "href": "mangroves.json"
+      "href": "mangroves.json",
+      "title": "Global Mangrove Watch"
     },
     {
       "rel": "license",

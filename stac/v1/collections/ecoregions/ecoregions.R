@@ -52,11 +52,11 @@ collection <- list(
         "data"
       ),
       "alternate" = list(
-        "http" =  list(
+        "local" =  list(
           "title"= "http access",
           "href"= "https://minio.carlboettiger.info/public-biodiversity/Ecoregions2017.fgb"
         ),
-        "http" =  list(
+        "original" =  list(
           "title"= "Original Shapefile",
           "href"= "https://storage.googleapis.com/teow2016/Ecoregions2017.zip"
         )

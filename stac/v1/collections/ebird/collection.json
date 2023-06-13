@@ -5,17 +5,20 @@
     {
       "rel": "parent",
       "type": "application/json",
+      "title": "DSE Biodiversity Catalog",
       "href": "../../catalog.json"
     },
     {
       "rel": "root",
       "type": "application/json",
+      "title": "DSE Biodiversity Catalog",
       "href": "../../catalog.json"
     },
     {
       "rel": "self",
       "type": "application/json",
-      "href": "ebird.json"
+      "href": "ebird.json",
+      "title": "eBird"
     },
     {
       "rel": "license",
@@ -41,7 +44,7 @@
       ]
     },
     "parquet": {
-      "href": "/vsis3/ebird",
+      "href": "s3://ebird",
       "title": "Parquet format",
       "description": "Access keys required. set S3 endpoint to <https://minio.carlboettiger.info>."
     }
@@ -61,7 +64,7 @@
       "interval": [
         [
           "2002-01-01T00:00:00Z",
-          {}
+          null
         ]
       ]
     }

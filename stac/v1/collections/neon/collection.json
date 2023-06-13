@@ -5,12 +5,14 @@
     {
       "rel": "parent",
       "type": "application/json",
+      "title": "DSE Biodiversity Catalog",
       "href": "../../catalog.json"
     },
     {
       "rel": "root",
       "type": "application/json",
-      "href": "../../catalog.json"
+      "href": "../../catalog.json",
+      "title": "DSE Biodiversity Catalog"
     },
     {
       "rel": "self",
@@ -67,7 +69,7 @@
       ]
     }
   },
-  "license": "Public Domain",
+  "license": "CC0",
   "keywords": [
     "NEON",
     "Biodiversity"
@@ -77,21 +79,22 @@
       "url": "https://neonscience.org",
       "name": "National Ecological Observatory Network",
       "roles": [
-        "processor"
+        "producer"
       ]
     },
     {
       "url": "https://www.battelle.org/",
       "name": "Battelle Memorial Institute",
       "roles": [
-        "manager"
+        "processor",
+        "host"
       ]
     },
     {
       "url": "https://www.nsf.gov/",
       "name": "National Science Foundation",
       "roles": [
-        "funder"
+        "licensor"
       ]
     },
     {
