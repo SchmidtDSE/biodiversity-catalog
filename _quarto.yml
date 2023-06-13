@@ -9,13 +9,21 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Basics"
+      - file: index.qmd
+        icon: house
+        text: About
+      - icon: book
+        text: Catalog
+        href: https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/catalog.json?.language=en
+      - icon: github
+        text: GitHub repo
+        href: https://github.com/schmidtDSE/biodiversity-catalog
+      - icon: globe-americas
+        text: DSE Home
+        href: https://dse.berkeley.edu
+      - section: Examples
         contents:
-          - file: index.qmd
-            icon: house
-            text: About
-          - icon: book
-            text: Catalog
-            href: https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/catalog.json?.language=en
-          - examples.qmd
-
+          - text: STAC Search
+            href: stac_search.qmd
+          - text: Satellite imagery
+            href: satellite.qmd
