@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Basics</a></li><li class="breadcrumb-item"><a href="./index.html">About</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -126,10 +126,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-house" role="img">
+</i> 
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/catalog.json?.language=en" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+</i> 
+ <span class="menu-text">Catalog</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/schmidtDSE/biodiversity-catalog" class="sidebar-item-text sidebar-link"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text">GitHub repo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://dse.berkeley.edu" class="sidebar-item-text sidebar-link"><i class="bi bi-globe-americas" role="img">
+</i> 
+ <span class="menu-text">DSE Home</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Basics</span></a>
+ <span class="menu-text">Examples</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -137,21 +165,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-house" role="img">
-</i> 
- <span class="menu-text">About</span></a>
+  <a href="./stac_search.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">STAC Search</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/catalog.json?.language=en" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
-</i> 
- <span class="menu-text">Catalog</span></a>
+  <a href="./satellite.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Satellite imagery</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
- <span class="menu-text">examples.qmd</span>
-  </li>
       </ul>
   </li>
     </ul>
@@ -189,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Large geospatial raster and vector data can best be accessed with ‘cloud-native’ protocols such as the <a href="https://gdal.org/user/virtual_file_systems.html">virtual filesystem in GDAL</a>, a popular C(++) library widely used to power various open source geospatial applications. This approach obviates the need to download and store very large data files. It works in anywhere an internet connection is available, though best performance can be achieved on a high-bandwidth or local area network.</p>
 <section id="account-keys-and-settings" class="level2">
 <h2 class="anchored" data-anchor-id="account-keys-and-settings">Account keys and settings</h2>
-<p>Access keys are required for data that is mirrored on the DSE cloud object store and for which licensing requirements prohibit re-distribution. Enter your <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> in <code>~/.aws/credentials</code> file or as environmental variables.</p>
+<p>Access keys are required for data that is mirrored on the DSE cloud object store and for which licensing requirements prohibit re-distribution. Enter your <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> in <code>~/.aws/credentials</code> file or as environmental variables. Some objects mirrored to the DSE object store are not subject to licenses preventing redistribution, and are made available on public buckets. These can be accessed with empty key/secret credentials, or by setting <code>AWS_NO_SIGN_REQUEST=FALSE</code>.</p>
 <p>To let the software know that data is not hosted on AWS but rather, at an independent object store, we must specify the domain of the new location as <code>AWS_S3_ENDPOINT</code> environmental variable, and indicate that our system does not use ‘virtual hosting’ style paths, <code>AWS_VIRTUAL_HOSTING=FALSE</code>. Environmental variables can be set in <code>~/.bashrc</code> (most platforms) or <code>.Renviron</code> file (for RStudio users)); though for clarity we will show how they can be set directly in python or R. See <a href="https://gdal.org/user/virtual_file_systems.html#vsis3">GDAL VFS documentation</a> for details.</p>
 <p>Some data linked in this catalog is already available from public cloud-based object stores such as Azure, Google Storage, or AWS. Note that the former two require their own virtual filesystem prefixes, <code>/vsiaz/</code> and <code>/vsigs</code> respectively, as described in the <a href="https://gdal.org/user/virtual_file_systems.html">docs</a>.</p>
 </section>
@@ -214,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="r">R</h2>
 <p>This process is nearly identical using any of the popular spatial frameworks in R, e.g.&nbsp;<code>terra</code>, <code>stars</code>, or <code>sf</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="st">"AWS_NO_SIGN_REQUEST"</span><span class="ot">=</span><span class="st">"TRUE"</span>)</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="st">"AWS_NO_SIGN_REQUEST"</span><span class="ot">=</span><span class="st">"TRUE"</span>) <span class="co"># set FALSE when password is required</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="st">"AWS_S3_ENDPOINT"</span><span class="ot">=</span><span class="st">"minio.carlboettiger.info"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="st">"AWS_VIRTUAL_HOSTING"</span><span class="ot">=</span><span class="st">"FALSE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
