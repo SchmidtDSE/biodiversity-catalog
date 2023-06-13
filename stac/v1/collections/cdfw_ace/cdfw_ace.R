@@ -10,7 +10,7 @@ collection <- list(
       "rel"= "item",
       "title"= "Summary",
       "type"= "application/json",
-      "href"= "items/item.json"
+      "href"= "summary.json"
     ),
      list(
       "rel"= "parent",

@@ -80,7 +80,7 @@ items <- list(
   "stac_version"= "1.0.0"
 )
 
-path <- file.path("stac/v1/collections/cdfw_ace/items/items.json")
+path <- file.path("stac/v1/collections/cdfw_ace/summary.json")
 jsonlite::write_json(items, path, pretty=TRUE, auto_unbox=TRUE, null="null")
 stac4cast::stac_validate(path)
 
