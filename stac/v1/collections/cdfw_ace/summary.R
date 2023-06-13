@@ -8,16 +8,19 @@ poly <- spData::us_states |> filter(NAME == "California") |> st_geometry() |> st
 poly <- read_json("poly.geojson")
 unlink("poly.geojson")
 poly <- poly$features[[1]]$geometry
+xl <- basename(url)
 url <- "https://minio.carlboettiger.info/public-biodiversity/ACE_List_of_Summary_Datasets.xlsx"
-download.file(url, basename(url))
-df <- read_xlsx(basename(url)) 
+download.file(url, xl)
+df <- read_xlsx(xl)
+unlink(xl)
 names(df) <- c("href", "title", "description")
 assets <- 
   df |> 
-  mutate(href = paste0("/vsicurl/",
-                       "https://minio.carlboettiger.info/",
+  mutate(href = paste0("/vsis3/",
                        "public-biodiversity/",
                        "ACE_summary/", href, ".gdb"),
+         description = paste0("public bucket path to gdb database file on DSE's S3 endpoint https://minio.carlboettiger.info. Additional information at <",
+                              description, ">"),
          roles = list("data")) |>
   toJSON(pretty = TRUE)
 assets <- fromJSON(assets, simplifyVector = FALSE)
