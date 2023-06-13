@@ -24,6 +24,12 @@
     {
       "rel": "child",
       "type": "application/json",
+      "title": "CDFW Areas of Conservation Emphasis (ACE)",
+      "href": "collections/cdfw_ace/collection.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
       "title": "IUCN Redlist Range Maps",
       "href": "collections/iucn/collection.json"
     },
@@ -122,18 +128,6 @@
       "type": "application/json",
       "title": "ESA Climate Change Initiative Land Cover Maps (Cloud Optimized GeoTIFF)",
       "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-cci-lc"
-    },
-    {
-      "rel": "child",
-      "type": "application/json",
-      "title": "Chloris Woody Biomass",
-      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/chloris-biomass"
-    },
-    {
-      "rel": "child",
-      "type": "application/json",
-      "title": "Forest Inventory and Analysis",
-      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/fia"
     }
   ]
 }
