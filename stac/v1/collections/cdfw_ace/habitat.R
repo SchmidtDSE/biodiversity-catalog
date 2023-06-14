@@ -9,7 +9,7 @@ poly <- read_json("poly.geojson")
 unlink("poly.geojson")
 poly <- poly$features[[1]]$geometry
 xl <- basename(url)
-url <- "https://minio.carlboettiger.info/public-biodiversity/ACE_List_of_Summary_Datasets.xlsx"
+url <- "https://minio.carlboettiger.info/public-biodiversity/ACE_List_of_Significant_Habitat_Datasets.xlsx"
 download.file(url, xl)
 df <- read_xlsx(xl)
 unlink(xl)
@@ -18,7 +18,7 @@ assets <-
   df |> 
   mutate(href = paste0("/vsicurl/", "https://minio.carlboettiger.info/",
                        "public-biodiversity/",
-                       "ACE_summary/", href, ".gdb"),
+                       "ACE_habitat/", href, ".gdb"),
          description = paste0("public bucket path to gdb database file on DSE's S3 endpoint. Prefix URL `/vsicurl/` for GDAL-based reads. Additional information at <",
                               description, ">"),
          roles = list("data")) |>
@@ -29,7 +29,7 @@ names(assets) <- df$href
 
 
 items <- list(
-  "id"= "cdfw_ace_summary",
+  "id"= "cdfw_ace_habitat",
   "type"= "Feature",
   "collection" = "cdfw_ace",
   "links"= list(
@@ -41,7 +41,7 @@ items <- list(
     ),
     list(
       "rel"= "parent",
-      "title"= "CDFW ACE Summary Datasets",
+      "title"= "CDFW ACE",
       "type"= "application/json",
       "href"= "collection.json"
     ),
@@ -53,9 +53,9 @@ items <- list(
     ),
     list(
       "rel"= "self",
-      "title"= "CDFW ACE",
+      "title"= "CDFW ACE Habitat Datasets",
       "type"= "application/json",
-      "href"= "summary.json"
+      "href"= "habitat.json"
     ),
     list(
       "rel"= "license",
@@ -83,7 +83,7 @@ items <- list(
   "stac_version"= "1.0.0"
 )
 
-path <- file.path("stac/v1/collections/cdfw_ace/summary.json")
+path <- file.path("stac/v1/collections/cdfw_ace/habitat.json")
 jsonlite::write_json(items, path, pretty=TRUE, auto_unbox=TRUE, null="null")
 stac4cast::stac_validate(path)
 

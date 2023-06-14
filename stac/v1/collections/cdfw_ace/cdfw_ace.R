@@ -8,9 +8,21 @@ collection <- list(
   "links"= list(
     list(
       "rel"= "item",
-      "title"= "Summary",
+      "title"= "Summary Datasets",
       "type"= "application/json",
       "href"= "summary.json"
+    ),
+    list(
+      "rel"= "item",
+      "title"= "Significant Habitat Datasets",
+      "type"= "application/json",
+      "href"= "habitat.json"
+    ),
+    list(
+      "rel"= "item",
+      "title"= "Datasets by Taxonomic Group",
+      "type"= "application/json",
+      "href"= "taxa.json"
     ),
      list(
       "rel"= "parent",

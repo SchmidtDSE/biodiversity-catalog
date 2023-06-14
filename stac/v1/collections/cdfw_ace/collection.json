@@ -4,9 +4,21 @@
   "links": [
     {
       "rel": "item",
-      "title": "Summary",
+      "title": "Summary Datasets",
       "type": "application/json",
       "href": "summary.json"
+    },
+    {
+      "rel": "item",
+      "title": "Significant Habitat Datasets",
+      "type": "application/json",
+      "href": "habitat.json"
+    },
+    {
+      "rel": "item",
+      "title": "Datasets by Taxonomic Group",
+      "type": "application/json",
+      "href": "taxa.json"
     },
     {
       "rel": "parent",
