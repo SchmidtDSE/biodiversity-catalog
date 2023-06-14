@@ -5,3 +5,4 @@
 .Rbuildignore
 /.quarto/
 /_site/
+docs
