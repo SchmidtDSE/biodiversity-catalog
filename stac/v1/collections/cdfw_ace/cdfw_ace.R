@@ -69,8 +69,8 @@ collection <- list(
       "bbox"= list(
         list(
           -124,
+          32,
           -114,
-          -32,
            42
         )
       )

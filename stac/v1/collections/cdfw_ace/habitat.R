@@ -75,8 +75,8 @@ items <- list(
   "geometry" = poly,
   "bbox"= list(
       -124,
+      32,
       -114,
-      -32,
        42
   ),
   "properties" = list("datetime" = "2018-02-01T00:00:00Z"),
