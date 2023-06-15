@@ -54,63 +54,63 @@ collection <- list(
   ), 
   "item_assets"= list(
     "irr_biomass_2010" = list(
-      "href" = "s3://biodiversity/Irrecoverable_C_Biomass_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Irrecoverable_Carbon_2010/Irrecoverable_C_Biomass_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Irrecoverable Carbon Biomass, 2010"
     ),
     "irr_soil_2010" = list(
-      "href" = "s3://biodiversity/Irrecoverable_C_Soil_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Irrecoverable_Carbon_2010/Irrecoverable_C_Soil_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Irrecoverable Carbon Soil, 2010"
     ),
     "irr_soil_2010" = list(
-      "href" = "s3://biodiversity/Irrecoverable_C_Total_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Irrecoverable_Carbon_2010/Irrecoverable_C_Total_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Irrecoverable Carbon Total, 2010"
     ),
     "irr_biomass_2018" = list(
-      "href" = "s3://biodiversity/Irrecoverable_C_Biomass_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Irrecoverable_Carbon_2018/Irrecoverable_C_Biomass_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Irrecoverable Carbon Biomass, 2018"
     ),
     "irr_soil_2018" = list(
-      "href" = "s3://biodiversity/Irrecoverable_C_Soil_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Irrecoverable_Carbon_2018/Irrecoverable_C_Soil_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Irrecoverable Carbon Soil, 2018"
     ),
     "irr_soil_2018" = list(
-      "href" = "s3://biodiversity/Irrecoverable_C_Total_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Irrecoverable_Carbon_2018/Irrecoverable_C_Total_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Irrecoverable Carbon Total, 2018"
     ),
     
     "vul_biomass_2010" = list(
-      "href" = "s3://biodiversity/Vulnerable_C_Biomass_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Vulnerable_Carbon_2010/Vulnerable_C_Biomass_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Vulnerable Carbon Biomass, 2010"
     ),
     "vul_soil_2010" = list(
-      "href" = "s3://biodiversity/Vulnerable_C_Soil_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Vulnerable_Carbon_2010/Vulnerable_C_Soil_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Vulnerable Carbon Soil, 2010"
     ),
     "vul_soil_2010" = list(
-      "href" = "s3://biodiversity/Vulnerable_C_Total_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Vulnerable_Carbon_2010/Vulnerable_C_Total_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Vulnerable Carbon Total, 2010"
     ),
     "vul_biomass_2018" = list(
-      "href" = "s3://biodiversity/Vulnerable_C_Biomass_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Vulnerable_Carbon_2018/Vulnerable_C_Biomass_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Vulnerable Carbon Biomass, 2018"
     ),
     "vul_soil_2018" = list(
-      "href" = "s3://biodiversity/Vulnerable_C_Soil_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Vulnerable_Carbon_2018/Vulnerable_C_Soil_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Vulnerable Carbon Soil, 2018"
     ),
     "vul_soil_2018" = list(
-      "href" = "s3://biodiversity/Vulnerable_C_Total_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Vulnerable_Carbon_2018/Vulnerable_C_Total_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Vulnerable Carbon Total, 2018"
     ),
@@ -118,32 +118,32 @@ collection <- list(
     
         
     "vul_biomass_2010" = list(
-      "href" = "s3://biodiversity/Manageable_C_Biomass_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Manageable_Carbon_2010/Manageable_C_Biomass_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Manageable Carbon Biomass, 2010"
     ),
     "vul_soil_2010" = list(
-      "href" = "s3://biodiversity/Manageable_C_Soil_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Manageable_Carbon_2010/Manageable_C_Soil_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Manageable Carbon Soil, 2010"
     ),
     "vul_soil_2010" = list(
-      "href" = "s3://biodiversity/Manageable_C_Total_2010.tif",
+      "href" = "s3://public-biodiversity/carbon/Manageable_Carbon_2010/Manageable_C_Total_2010.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Manageable Carbon Total, 2010"
     ),
     "vul_biomass_2018" = list(
-      "href" = "s3://biodiversity/Manageable_C_Biomass_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Manageable_Carbon_2018/Manageable_C_Biomass_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Manageable Carbon Biomass, 2018"
     ),
     "vul_soil_2018" = list(
-      "href" = "s3://biodiversity/Manageable_C_Soil_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Manageable_Carbon_2018/Manageable_C_Soil_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Manageable Carbon Soil, 2018"
     ),
     "vul_soil_2018" = list(
-      "href" = "s3://biodiversity/Manageable_C_Total_2018.tif",
+      "href" = "s3://public-biodiversity/carbon/Manageable_Carbon_2018/Manageable_C_Total_2018.tif",
       "type" = "image/tiff; application=geotiff; profile=cloud-optimized", "roles"=list("data"),
       "title" = "Manageable Carbon Total, 2018"
     )
