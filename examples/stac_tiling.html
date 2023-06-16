@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="r" class="level1">
 <h1>R</h1>
-<p>Compute NDVI from sentinel2 over arbitrary data cube:</p>
+<p>Here we compute NDVI from sentinel2 over arbitrary data cube:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstac)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gdalcubes)</span>
@@ -238,6 +238,9 @@ will retire shortly. Please refer to R-spatial evolution reports on
 https://r-spatial.org/r/2023/05/15/evolution4.html for details.
 This package is now running under evolution status 0 </code></pre>
 </div>
+</div>
+<p>We will search the STAC catalog for all satellite images in our desired space &amp; time cube:</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## STAC Search over 400 million assets.</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>box <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">xmin=</span><span class="sc">-</span><span class="fl">122.51006</span>, <span class="at">ymin=</span><span class="fl">37.70801</span>, <span class="at">xmax=</span><span class="sc">-</span><span class="fl">122.36268</span>, <span class="at">ymax=</span><span class="fl">37.80668</span>) </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>start_date <span class="ot">&lt;-</span> <span class="st">"2022-06-01"</span></span>
@@ -249,42 +252,52 @@ This package is now running under evolution status 0 </code></pre>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">bbox =</span> box,</span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">datetime =</span> <span class="fu">paste</span>(start_date, end_date, <span class="at">sep=</span><span class="st">"/"</span>),</span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">limit =</span> <span class="dv">100</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">post_request</span>() </span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>col <span class="ot">&lt;-</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stac_image_collection</span>(items<span class="sc">$</span>features,</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>                        <span class="at">asset_names =</span> <span class="fu">c</span>(<span class="st">"B04"</span>,<span class="st">"B08"</span>, <span class="st">"SCL"</span>),</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>                        <span class="at">property_filter =</span> \(x) {x[[<span class="st">"eo:cloud_cover"</span>]] <span class="sc">&lt;</span> <span class="dv">20</span>})</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>cube <span class="ot">&lt;-</span> <span class="fu">cube_view</span>(<span class="at">srs =</span> <span class="st">"EPSG:4326"</span>,  </span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                  <span class="at">extent =</span> <span class="fu">list</span>(<span class="at">t0 =</span> start_date, <span class="at">t1 =</span> end_date,</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                                <span class="at">left =</span> box[<span class="dv">1</span>], <span class="at">right =</span> box[<span class="dv">3</span>],</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>                                <span class="at">top =</span> box[<span class="dv">4</span>], <span class="at">bottom =</span> box[<span class="dv">2</span>]),</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>                  <span class="at">nx =</span> <span class="dv">2400</span>, <span class="at">ny =</span> <span class="dv">2400</span>, <span class="at">dt =</span> <span class="st">"P1D"</span>,</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                  <span class="at">aggregation =</span> <span class="st">"median"</span>, <span class="at">resampling =</span> <span class="st">"average"</span>)</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>S2.mask <span class="ot">&lt;-</span> <span class="fu">image_mask</span>(<span class="st">"SCL"</span>, <span class="at">values=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">8</span>,<span class="dv">9</span>)) <span class="co"># mask clouds and cloud shadows</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>ndvi <span class="ot">&lt;-</span> <span class="fu">raster_cube</span>(col, cube, <span class="at">mask =</span> S2.mask) <span class="sc">|&gt;</span></span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B04"</span>, <span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reduce_time</span>(<span class="fu">c</span>(<span class="st">"mean(NDVI)"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_stars</span>()</span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(ndvi) <span class="sc">+</span> <span class="fu">tm_raster</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">post_request</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We create an image collection of those features that have our desired bands, including the cloud image mask, and filtering out images with over 20% cloud covered (as denoted in their stac metadata)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>col <span class="ot">&lt;-</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stac_image_collection</span>(items<span class="sc">$</span>features,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">asset_names =</span> <span class="fu">c</span>(<span class="st">"B04"</span>,<span class="st">"B08"</span>, <span class="st">"SCL"</span>),</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">property_filter =</span> \(x) {x[[<span class="st">"eo:cloud_cover"</span>]] <span class="sc">&lt;</span> <span class="dv">20</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can now define our cube of interest. Note that this specification is completely independent of the actual data assets – the actual spatial and temporal resolution of the data could be finer or coarser than we request! A given x,y,t pixel in this abstract cube may be covered by multiple images (e.g.&nbsp;overlapping images, or multiple satellite fly-bys in the same week) – and the code will aggregate them by the desired <code>aggregation</code> method (median). Other such x,y,t pixels in the cube may have no data coverage at all – perhaps the only images covering those pixels were removed by the cloud mask. In this case, the pixels could be filled in by the <code>resampling</code> method (such as a spline, nearest-neighbor, or in this case, average of nearby pixels, See <a href="https://gdal.org/programs/gdalwarp.html">gdalwarp</a>. Note that this approach means we can define both the projection and the spatio-temporal resolution of the output completely independently from the input.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>cube <span class="ot">&lt;-</span> <span class="fu">cube_view</span>(<span class="at">srs =</span> <span class="st">"EPSG:4326"</span>,  </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">extent =</span> <span class="fu">list</span>(<span class="at">t0 =</span> start_date, <span class="at">t1 =</span> end_date,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                                <span class="at">left =</span> box[<span class="dv">1</span>], <span class="at">right =</span> box[<span class="dv">3</span>],</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                                <span class="at">top =</span> box[<span class="dv">4</span>], <span class="at">bottom =</span> box[<span class="dv">2</span>]),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">nx =</span> <span class="dv">2400</span>, <span class="at">ny =</span> <span class="dv">2400</span>, <span class="at">dt =</span> <span class="st">"P1D"</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                  <span class="at">aggregation =</span> <span class="st">"median"</span>, <span class="at">resampling =</span> <span class="st">"average"</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>S2.mask <span class="ot">&lt;-</span> <span class="fu">image_mask</span>(<span class="st">"SCL"</span>, <span class="at">values=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">8</span>,<span class="dv">9</span>)) <span class="co"># mask clouds and cloud shadows</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>virtual_cube <span class="ot">&lt;-</span> <span class="fu">raster_cube</span>(col, cube, <span class="at">mask =</span> S2.mask)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Observe that this evaluation is “lazy”, we haven’t yet downloaded a single pixel of satellite imagery. Using our virtual cube, we can reference just the bands of interest and perform arbitrary operations on the those pixels, e.g.&nbsp;to calculate NDVI. This entire calculation happens over network interface range requests, first computing the aggregation and resampling warps. See the <a href="https://doi.org/10.3390/data4030092">gdalcubes paper</a> for details.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ndvi <span class="ot">&lt;-</span> virtual_cube <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B04"</span>, <span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reduce_time</span>(<span class="fu">c</span>(<span class="st">"mean(NDVI)"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_stars</span>()</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(ndvi) <span class="sc">+</span> <span class="fu">tm_raster</span>(<span class="at">palette =</span> viridisLite<span class="sc">::</span><span class="fu">mako</span>(<span class="dv">20</span>), <span class="at">n=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>stars object downsampled to 1000 by 1000 cells. See tm_shape manual (argument raster.downsample)</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Variable(s) "NA" contains positive and negative values, so midpoint is set to 0. Set midpoint = NA to show the full spectrum of the color palette.</code></pre>
-</div>
 <div class="cell-output-display">
-<p><img src="stac_tiling_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="stac_tiling_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="python" class="level1">
 <h1>Python</h1>
+<p><code>pystac</code> + <code>stackstac</code> provides a comparable approach to <code>rstac</code> + <code>gdalcubes</code> approach.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pystac</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> stackstac</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
