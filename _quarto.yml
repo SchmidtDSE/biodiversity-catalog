@@ -12,6 +12,9 @@ website:
       - file: index.qmd
         icon: house
         text: About
+      - text: JuypterHub
+        icon: pc-display-horizontal
+        href: https://hub.jupytearth.org/
       - icon: book
         text: Catalog
         href: https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/catalog.json?.language=en
