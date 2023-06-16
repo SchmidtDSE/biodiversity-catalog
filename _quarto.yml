@@ -23,7 +23,11 @@ website:
         href: https://dse.berkeley.edu
       - section: Examples
         contents:
+          - text: Cloud Basics
+            href: examples/cloud-basics.qmd
           - text: STAC Search
-            href: stac_search.qmd
-          - text: Satellite imagery
-            href: satellite.qmd
+            href: examples/stac_search.qmd
+          - text: STAC Tiling
+            href: examples/stac_tiling.qmd
+          - text: Optimizing formats
+            href: examples/ace.qmd

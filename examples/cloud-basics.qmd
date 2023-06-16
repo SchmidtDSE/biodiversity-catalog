@@ -3,10 +3,15 @@ title: "cloud basics"
 format: html
 ---
 
+```{r include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
 # R 
-```{r}
-Sys.setenv("AWS_ACCESS_KEY_ID"=Sys.getenv("MINIO_KEY"))
-Sys.setenv("AWS_SECRET_ACCESS_KEY"=Sys.getenv("MINIO_SECRET"))
+
+```{r include=FALSE}
+#Sys.setenv("AWS_ACCESS_KEY_ID"=Sys.getenv("MINIO_KEY"))
+#Sys.setenv("AWS_SECRET_ACCESS_KEY"=Sys.getenv("MINIO_SECRET"))
 ```
 
 ```{r}
@@ -60,14 +65,14 @@ plot(r_cropped)
 
 ```{r}
 box <- st_bbox(india)
-v <- cube_view(srs = "EPSG:4326",
+view <- cube_view(srs = "EPSG:4326",
                extent = list(t0 = "2010-01-01", t1 = "2010-01-01",
                              left = box[1], right = box[3],
                              top = box[4], bottom = box[2]),
                nx = 400, ny=400, dt = "P1Y")
 
 img <- gdalcubes::create_image_collection(url, date_time = "2010-01-01")
-raster_cube(img, v) |> plot(col = viridisLite::viridis)
+raster_cube(img, view) |> plot(col = viridisLite::viridis)
 ```
 
 Like `terra` and `stars`, gdalcubes includes a variety of functions for pixel-based operations across different bands, often with better performance through optimized lazy-evaluation.  Otherwise, use `stars::st_as_stars()` to coerce a `raster_cube` object to  a stars object (e.g. for `tmap` and other plotting.)
@@ -81,7 +86,38 @@ In many spatial workflows it desirable to write out intermediate or final produc
 Sub-setting spatial vector objects works a little differently.  In both `terra` and `sf`, it is best to specify sub-setting when first opening the vector files (recent versions of `terra` let us delay this a bit).
 
 ```{r}
-"/vsis3/biodiversity/World-Protected-Areas-May2023.gdb"
+wpa_url <- "/vsis3/biodiversity/World-Protected-Areas-May2023.gdb"
+```
+
+### terra
+
+```{r}
+wpas <- vect(wpa_url, filter = vect(india))
+```
+
+We can remotely filter polygon data by other columns as well by using postgis query syntax:
+
+```{r}
+names <- vect(wpa_url, query = "SELECT DISTINCT NAME FROM WDPA_WDOECM_poly_May2023_all")
+head(names$NAME)
+```
+
+### sf
+
+sf syntax is functionally equivalent, but takes the filter as `wkt` text. 
+
+```{r eval=FALSE}
+wpas2 <- st_read(wpa_url, wkt = st_as_text(st_geometry(india)))
+```
+
+Plots combining vector and raster layers with `tmap`
+
+```{r}
+library(tmap)
+r <- raster_cube(img, view) |> st_as_stars()
+
+tm_shape(r) + tm_raster(legend.show = FALSE) +
+  tm_shape(st_as_sf(wpas)) + tm_polygons(alpha=0.5)
 ```
 
 

@@ -1,0 +1,43 @@
+---
+title: "Areas of Conservation Emphasis"
+---
+
+
+```{r}
+library(stars)
+library(dplyr)
+library(sf)
+```
+
+Terrestrial climate change resilience, copy URL from [Biodiversity Catalog](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/collections/cdfw_ace/summary.json?.asset=asset-ds2738)
+
+```{r}
+data <- "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2738.gdb"
+ex <- sf::st_read(data)
+names(ex)
+```
+
+
+```{r}
+# Allows stars to auto-compute the grid
+climate_resilience <- ex |> select(CLIM_RANK) |> stars::st_rasterize()
+
+plot(climate_resilience, col=viridisLite::turbo(n = 5), nbreaks=6)
+```
+
+
+```{r}
+veg_refugia <- ex |> select(VegRefugiaScore) |> stars::st_rasterize() 
+```
+
+```{r message=FALSE}
+library(tmap)
+tmap_mode("view")
+
+tm_shape(veg_refugia) + 
+  tm_raster(palette = viridisLite::mako(9), legend.show = FALSE) +   
+  tm_shape(climate_resilience) + 
+  tm_raster(palette = viridisLite::turbo(5), legend.show = FALSE)
+```
+
+

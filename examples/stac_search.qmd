@@ -1,0 +1,16 @@
+---
+title: stac search
+---
+
+
+# R 
+
+The R client, `rstac`, only supports the STAC API, not static catalogs.  For now, it can be used in conjunction with external stac catalogs (e.g. Planetary Computer), but cannot search the static biodiversity catalog.  The static catalogues are merely JSON files and can be easily parsed with tools like `jsonlite`.  
+
+```{r}
+library(jsonlite)
+```
+
+# python
+
+The python client, `pystac`, provides a rich programmatic methods.  

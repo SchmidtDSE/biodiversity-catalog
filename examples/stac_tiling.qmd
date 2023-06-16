@@ -1,0 +1,52 @@
+---
+title: Stac Tiling
+---
+
+# R
+
+Compute NDVI from sentinel2 over arbitrary data cube:
+
+```{r}
+library(rstac)
+library(gdalcubes)
+library(stars)
+library(tmap)
+
+## STAC Search over 400 million assets.
+box <- c(xmin=-122.51006, ymin=37.70801, xmax=-122.36268, ymax=37.80668) 
+start_date <- "2022-06-01"
+end_date <- "2022-08-01"
+
+items <- 
+  stac("https://earth-search.aws.element84.com/v0/") |>
+  stac_search(collections = "sentinel-s2-l2a-cogs",
+              bbox = box,
+              datetime = paste(start_date, end_date, sep="/"),
+              limit = 100) |>
+  post_request() 
+
+col <-
+  stac_image_collection(items$features,
+                        asset_names = c("B04","B08", "SCL"),
+                        property_filter = \(x) {x[["eo:cloud_cover"]] < 20})
+
+cube <- cube_view(srs = "EPSG:4326",  
+                  extent = list(t0 = start_date, t1 = end_date,
+                                left = box[1], right = box[3],
+                                top = box[4], bottom = box[2]),
+                  nx = 2400, ny = 2400, dt = "P1D",
+                  aggregation = "median", resampling = "average")
+
+S2.mask <- image_mask("SCL", values=c(3,8,9)) # mask clouds and cloud shadows
+
+ndvi <- raster_cube(col, cube, mask = S2.mask) |>
+  select_bands(c("B04", "B08")) |>
+  apply_pixel("(B08-B04)/(B08+B04)", "NDVI") |>
+  reduce_time(c("mean(NDVI)")) |>
+  st_as_stars()
+
+tm_shape(ndvi) + tm_raster()
+```
+
+# Python
+
