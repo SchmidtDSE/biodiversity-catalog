@@ -4,14 +4,18 @@ title: Stac Tiling
 
 # R
 
-Compute NDVI from sentinel2 over arbitrary data cube:
+Here we compute NDVI from sentinel2 over arbitrary data cube:
 
 ```{r}
 library(rstac)
 library(gdalcubes)
 library(stars)
 library(tmap)
+```
 
+We will search the STAC catalog for all satellite images in our desired space & time cube:
+
+```{r}
 ## STAC Search over 400 million assets.
 box <- c(xmin=-122.51006, ymin=37.70801, xmax=-122.36268, ymax=37.80668) 
 start_date <- "2022-06-01"
@@ -24,12 +28,21 @@ items <-
               datetime = paste(start_date, end_date, sep="/"),
               limit = 100) |>
   post_request() 
+```
 
+We create an image collection of those features that have our desired bands, including the cloud image mask, and filtering out images with over 20% cloud covered (as denoted in their stac metadata)
+
+```{r}
 col <-
   stac_image_collection(items$features,
                         asset_names = c("B04","B08", "SCL"),
                         property_filter = \(x) {x[["eo:cloud_cover"]] < 20})
+```
 
+We can now define our cube of interest.  Note that this specification is completely independent of the actual data assets -- the actual spatial and temporal resolution of the data could be finer or coarser than we request! A given x,y,t pixel in this abstract cube may be covered by multiple images (e.g. overlapping images, or multiple satellite fly-bys in the same week) -- and the code will aggregate them by the desired `aggregation` method (median).  Other such x,y,t pixels in the cube may have no data coverage at all -- perhaps the only images covering those pixels were removed by the cloud mask.  In this case, the pixels could be filled in by the `resampling` method (such as a spline, nearest-neighbor, or in this case, average of nearby pixels, See [gdalwarp](https://gdal.org/programs/gdalwarp.html).  Note that this approach means we can define both the projection and the spatio-temporal resolution of the output completely independently from the input.  
+
+
+```{r}
 cube <- cube_view(srs = "EPSG:4326",  
                   extent = list(t0 = start_date, t1 = end_date,
                                 left = box[1], right = box[3],
@@ -39,14 +52,30 @@ cube <- cube_view(srs = "EPSG:4326",
 
 S2.mask <- image_mask("SCL", values=c(3,8,9)) # mask clouds and cloud shadows
 
-ndvi <- raster_cube(col, cube, mask = S2.mask) |>
+virtual_cube <- raster_cube(col, cube, mask = S2.mask)
+```
+
+Observe that this evaluation is "lazy", we haven't yet downloaded a single pixel of satellite imagery.  Using our virtual cube, we can reference just the bands of interest and perform arbitrary operations on the those pixels, e.g. to calculate NDVI.  This entire calculation happens over network interface range requests, first computing the aggregation and resampling warps.  See the [gdalcubes paper](https://doi.org/10.3390/data4030092) for details.  
+
+```{r}
+ndvi <- virtual_cube |>
   select_bands(c("B04", "B08")) |>
   apply_pixel("(B08-B04)/(B08+B04)", "NDVI") |>
   reduce_time(c("mean(NDVI)")) |>
   st_as_stars()
 
-tm_shape(ndvi) + tm_raster()
+tm_shape(ndvi) + tm_raster(palette = viridisLite::mako(20), n=20)
 ```
 
 # Python
 
+`pystac` + `stackstac` provides a comparable approach to `rstac` + `gdalcubes` approach.
+
+```{python}
+import pystac
+import stackstac
+```
+
+
+```{python}
+```

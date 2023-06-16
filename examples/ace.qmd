@@ -1,7 +1,19 @@
 ---
-title: "Areas of Conservation Emphasis"
+title: "Optimizing formats for virtual filesystems"
 ---
 
+
+Relevant geospatial data is not always formatted for optimum performance in analysis pipelines.  Not all geospatial formats are compatible with virtual filesystem access at all, while others (zipped shapefiles, netcdf, gribs) are usable but less efficient when accessed over network-based interfaces. Meanwhile, many recent formats, such as [Cloud Optimized Geotiff](https://https://www.cogeo.org/), [Zarr](https://github.com/zarr-developers/geozarr-spec), or [geoparquet](https://github.com/opengeospatial/geoparquet) excel at this. This enables fast, seamless pipelines without assuming that data is first downloaded in full, which can be both less efficient and add friction to production pipelines that need access to constantly evolving data streams, like satellite imagery, to provide up-to-date indicators.
+
+
+
+## Rasterizing
+
+Here we take a look at data from the California Fish and Wildlife [Areas of Conservation Emphasis (ACE)](https://wildlife.ca.gov/Data/Analysis/Ace).  The original data product offers a set of tiled hexes, which is not particularly efficient for some analysis or visualization pipelines.  Here we convert to raster versions:
+
+```{r include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
 
 ```{r}
 library(stars)
@@ -9,20 +21,28 @@ library(dplyr)
 library(sf)
 ```
 
-Terrestrial climate change resilience, copy URL from [Biodiversity Catalog](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/collections/cdfw_ace/summary.json?.asset=asset-ds2738)
+Terrestrial climate change resilience, copy URL from [DSE Biodiversity Catalog](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/schmidtDSE/biodiversity-catalog/main/stac/v1/collections/cdfw_ace/summary.json?.asset=asset-ds2738)
+
+
+
 
 ```{r}
+# note, in sf this is not actually a lazy read
 data <- "/vsicurl/https://minio.carlboettiger.info/public-biodiversity/ACE_summary/ds2738.gdb"
 ex <- sf::st_read(data)
 names(ex)
 ```
 
+Typically we would specify grid resolution we want for our raster, but in this case we can also allow `stars` to guess an appropriate scale based on the sizes of the original hexagon tiles. We will rasterize each value column, in this case, the climate resilience rank (on scale 1-5) and the vegetation refugia (continous scale 0-1):
 
 ```{r}
-# Allows stars to auto-compute the grid
-climate_resilience <- ex |> select(CLIM_RANK) |> stars::st_rasterize()
+climate_resilience <-
+  ex |> 
+  select(CLIM_RANK) |>
+  stars::st_rasterize()
 
-plot(climate_resilience, col=viridisLite::turbo(n = 5), nbreaks=6)
+# optional static plot:
+# plot(climate_resilience, col=viridisLite::turbo(n = 5), nbreaks=6)
 ```
 
 
@@ -30,14 +50,17 @@ plot(climate_resilience, col=viridisLite::turbo(n = 5), nbreaks=6)
 veg_refugia <- ex |> select(VegRefugiaScore) |> stars::st_rasterize() 
 ```
 
+
+We can now easily add these as layers on an interactive leaflet map:  (Trying this with the original hexes is far more resource-intensive in leaflet!)  Use the map controls to alter the base map and toggle the layers:
+
 ```{r message=FALSE}
 library(tmap)
 tmap_mode("view")
 
 tm_shape(veg_refugia) + 
-  tm_raster(palette = viridisLite::mako(9), legend.show = FALSE) +   
+  tm_raster(palette = viridisLite::mako(9), legend.show = FALSE, alpha=0.8) +   
   tm_shape(climate_resilience) + 
-  tm_raster(palette = viridisLite::turbo(5), legend.show = FALSE)
+  tm_raster(palette = viridisLite::turbo(5), legend.show = FALSE, alpha=0.8)
 ```
-
+In this 
 
