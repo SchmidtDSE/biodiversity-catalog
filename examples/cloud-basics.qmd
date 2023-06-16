@@ -1,0 +1,91 @@
+---
+title: "cloud basics"
+format: html
+---
+
+# R 
+```{r}
+Sys.setenv("AWS_ACCESS_KEY_ID"=Sys.getenv("MINIO_KEY"))
+Sys.setenv("AWS_SECRET_ACCESS_KEY"=Sys.getenv("MINIO_SECRET"))
+```
+
+```{r}
+Sys.setenv("AWS_S3_ENDPOINT"="minio.carlboettiger.info")
+Sys.setenv("AWS_VIRTUAL_HOSTING"="FALSE")
+```
+
+## Rasters
+
+```{r message=FALSE}
+library(sf)
+library(stars)
+library(rstac)
+library(gdalcubes)
+```
+
+```{r, message=FALSE}
+library(dplyr)
+library(spData)
+india <- spData::world |> filter(name_long=="India") 
+```
+
+Single raster:
+
+```{r}
+url <- "/vsis3/public-biodiversity/carbon/Irrecoverable_Carbon_2010/Irrecoverable_C_Total_2010.tif"
+```
+
+
+Both `stars` and `terra` handle lazy reads well.  Stars remains 'lazy' even after cropping, while terra evaluates at first call to `crop`.  
+
+```{r}
+r <- stars::read_stars(url)
+r_cropped <- r |> st_crop(india)
+plot(r_cropped)
+```
+
+
+### terra
+
+```{r}
+library(terra)
+r <- terra::rast(url)
+r_cropped <- r |> terra::crop(vect(india))
+plot(r_cropped)
+```
+
+### gdalcubes
+
+`gdalcubes` is most powerful in working with large numbers of individual raster assets that are to be combined into a space-time "data cube".  However, it works very nicely even with a single or small collection of rasters as a high-level interface for lazy reads, including cropping, coordinate transforms, and upscaling or downscaling spatial sampling.  The following is substantially faster than the alternative methods.  
+
+```{r}
+box <- st_bbox(india)
+v <- cube_view(srs = "EPSG:4326",
+               extent = list(t0 = "2010-01-01", t1 = "2010-01-01",
+                             left = box[1], right = box[3],
+                             top = box[4], bottom = box[2]),
+               nx = 400, ny=400, dt = "P1Y")
+
+img <- gdalcubes::create_image_collection(url, date_time = "2010-01-01")
+raster_cube(img, v) |> plot(col = viridisLite::viridis)
+```
+
+Like `terra` and `stars`, gdalcubes includes a variety of functions for pixel-based operations across different bands, often with better performance through optimized lazy-evaluation.  Otherwise, use `stars::st_as_stars()` to coerce a `raster_cube` object to  a stars object (e.g. for `tmap` and other plotting.)
+
+### Write operations
+
+In many spatial workflows it desirable to write out intermediate or final products to files that can be rendered for visualization or consumed by other software or workflows.  Just as we can read directly from our S3 cloud storage systems, we can also write our outputs back to them.  (Note that not all gdal drivers supporting VSI reads support VSI writes.)
+
+## Vectors
+
+Sub-setting spatial vector objects works a little differently.  In both `terra` and `sf`, it is best to specify sub-setting when first opening the vector files (recent versions of `terra` let us delay this a bit).
+
+```{r}
+"/vsis3/biodiversity/World-Protected-Areas-May2023.gdb"
+```
+
+
+# Python
+
+
+(Coming soon)
