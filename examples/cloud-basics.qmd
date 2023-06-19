@@ -3,6 +3,11 @@ title: "cloud basics"
 format: html
 ---
 
+Much scientific computing focuses on the premise that data must be downloaded to a local filesystem (hard-drive) before use.  This tutorial focuses on techniques for accessing data directly over a network connection to an object store (such as AWS S3, Google Storage, or Azure blobstore) instead. Object stores are not restricted to commercial cloud providers -- today, many research compute centers and academic institutions host their own object stores on their own clusters, such as the NSF-funded [OpenStorageNetwork](https://www.openstoragenetwork.org/),  [Jetstream2](https://docs.jetstream-cloud.org/overview/overview-doc/), using open source software like [MINIO](https://min.io) or Redhat [CEPH](https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/1.3/html/object_gateway_guide_for_red_hat_enterprise_linux/object_gateway_s3_api).  These open source options implement the same application programming interface as AWS S3, making them compatible with software written for this first big commercial and most widely used object store.  
+
+You do not need an actual cloud host to use these patterns -- a user could install a MINIO instance on their own laptop.  This can be very useful for testing purposes.  Setting up MINIO instance on a personal desktop or local server can be an effective way to share data with a larger team.  While this pattern is similar to relational databases such as MySQL or Postgres where data is typically accessed on a central server, it is important to note that object stores are a form of 'static' storage.  When we make a request against a relational database asking for the sum of a slice of data, that computation is performed by the server, and only the resulting sum is sent back to our local machine. When we make such a request against an object store, the slice is extracted from the larger dataset and sent across the network, and the sum is computed on the  local machine (streaming).
+
+
 ```{r include=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 ```

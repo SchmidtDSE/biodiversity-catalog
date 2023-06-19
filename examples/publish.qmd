@@ -3,8 +3,13 @@ title: "Creating new catalog entries"
 ---
 
 
+
+
 Relevant geospatial data is not always formatted for optimum performance in analysis pipelines.  Not all geospatial formats are compatible with virtual filesystem access at all, while others (zipped shapefiles, netcdf, gribs) are usable but less efficient when accessed over network-based interfaces. Meanwhile, many recent formats, such as [Cloud Optimized Geotiff](https://https://www.cogeo.org/), [Zarr](https://github.com/zarr-developers/geozarr-spec), or [geoparquet](https://github.com/opengeospatial/geoparquet) excel at this. This enables fast, seamless pipelines without assuming that data is first downloaded in full, which can be both less efficient and add friction to production pipelines that need access to constantly evolving data streams, like satellite imagery, to provide up-to-date indicators.
 
+```{r include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
 
 
 ## Example: Rasterizing large vectors
@@ -91,3 +96,5 @@ mc("cp -r local_dir minio/bucket-name/path")
 ## Creating new STAC Catalog Entries
 
 In addition to writing out a derived layer, we may want to create a metadata entry which will add the resulting product to the data.  We can also write new entries for data products which can already be found on other portals.  A stac catalog entry is a simple JSON file which conforms to the [STAC spec](https://stacspec.org/en/about/stac-spec/), and can be generated programmatically or merely written out manually.  See the JSON files in the [DSE Biodiversity Catalog on GitHub](https://github.com/SchmidtDSE/biodiversity-catalog/tree/main/stac/v1/collections) for examples.  Simply commit new JSON files to the GitHub repository and link them from the top-level [catalog.json](https://github.com/SchmidtDSE/biodiversity-catalog/blob/main/stac/v1/catalog.json) or appropriate sub-catalog to add them.  
+
+(Details / embedded examples to come)
