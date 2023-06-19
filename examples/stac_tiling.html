@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stac Tiling</title>
+<title>STAC Tiling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stac Tiling</h1>
+<h1 class="title">STAC Tiling</h1>
 </div>
 
 
@@ -216,9 +216,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<p>Describing geospatial assets using STAC metadata, as with the Biodiversity Data Catalog, is not merely a convenient way to improve discovery of existing resources – it can also open the door to substantial performance gains. This is most visible when analyses involve large numbers of individual spatial assets, such as with satellite imagery.</p>
+<p>Most geospatial formats, like geotif, embed spatial metadata such as the bounding box, description of bands, spatial projection and resolution into each individual file. Even though range request methods allow us to read these metadata bytes without downloading the entire asset, making such requests over thousands or hundreds of thousands of assets that comprise modern Earth Observation (EO) data quickly becomes a bottleneck. The metadata available in the STAC catalog for all assets (i.e.&nbsp;tif files) allows us to programmatically identify which assets fall into a particular space-time data cube very efficiently.</p>
+<p>Here we illustrate the use of STAC in programmatically constructing a data cube of satellite imagery assets corresponding to the desired set of space, time, and spectral bands, and excluding assets with insufficient quality flags in metadata (in this case, above a given threshold for cloud cover.) This high-level interface allows us to ignore the nitty gritty of individual satellite image files from different bands, taken at different times, and overlapping in different parts of space, and automatically presents that information to us as a coherent data cube. The approach leverages ‘lazy evaluation’ very effectively, allowing us to avoid unnecessary computation while processing data that may be far too large to fit into computer RAM. This approach works similarly in both R and python.</p>
 <section id="r" class="level1">
 <h1>R</h1>
-<p>Here we compute NDVI from sentinel2 over arbitrary data cube:</p>
+<p>Here we compute NDVI from Sentinel2 over arbitrary data cube:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstac)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gdalcubes)</span>
