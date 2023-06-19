@@ -178,20 +178,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../examples/stac_search.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">STAC Search</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../examples/stac_tiling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">STAC Tiling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../examples/ace.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Optimizing formats</span></a>
+  <a href="../examples/publish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Publishing Data</span></a>
   </div>
 </li>
       </ul>
@@ -268,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="gdalcubes" class="level3">
 <h3 class="anchored" data-anchor-id="gdalcubes">gdalcubes</h3>
-<p><code>gdalcubes</code> is most powerful in working with large numbers of individual raster assets that are to be combined into a space-time “data cube”. However, it works very nicely even with a single or small collection of rasters as a high-level interface for lazy reads, including cropping, coordinate transforms, and upscaling or downscaling spatial sampling. The following is substantially faster than the alternative methods.</p>
+<p><code>gdalcubes</code> is most powerful in working with large numbers of individual raster assets that are to be combined into a space-time “data cube”. However, it works very nicely even with a single or small collection of rasters as a high-level interface for lazy reads, including cropping, coordinate transforms, and upscaling or downscaling spatial sampling. This approach is also substantially faster than the alternative methods for remote subsetting and lazy eval analysis. See the entry on <a href="stac_tiling.html">stac tiling</a> for more details.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>box <span class="ot">&lt;-</span> <span class="fu">st_bbox</span>(india)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>view <span class="ot">&lt;-</span> <span class="fu">cube_view</span>(<span class="at">srs =</span> <span class="st">"EPSG:4326"</span>,</span>
@@ -287,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="write-operations" class="level3">
 <h3 class="anchored" data-anchor-id="write-operations">Write operations</h3>
-<p>In many spatial workflows it desirable to write out intermediate or final products to files that can be rendered for visualization or consumed by other software or workflows. Just as we can read directly from our S3 cloud storage systems, we can also write our outputs back to them. (Note that not all gdal drivers supporting VSI reads support VSI writes.)</p>
+<p>In many spatial workflows it desirable to write out intermediate or final products to files that can be rendered for visualization or consumed by other software or workflows. Just as we can read directly from our S3 cloud storage systems, we can also write our outputs back to them. See the entry on <a href="publish.html">Publishing Data</a> for details.</p>
 </section>
 </section>
 <section id="vectors" class="level2">
