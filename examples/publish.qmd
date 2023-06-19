@@ -1,5 +1,5 @@
 ---
-title: "Optimizing formats for virtual filesystems"
+title: "Creating new catalog entries"
 ---
 
 
@@ -7,7 +7,7 @@ Relevant geospatial data is not always formatted for optimum performance in anal
 
 
 
-## Rasterizing
+## Example: Rasterizing large vectors
 
 Here we take a look at data from the California Fish and Wildlife [Areas of Conservation Emphasis (ACE)](https://wildlife.ca.gov/Data/Analysis/Ace).  The original data product offers a set of tiled hexes, which is not particularly efficient for some analysis or visualization pipelines.  Here we convert to raster versions:
 
@@ -62,5 +62,32 @@ tm_shape(veg_refugia) +
   tm_shape(climate_resilience) + 
   tm_raster(palette = viridisLite::turbo(5), legend.show = FALSE, alpha=0.8)
 ```
-In this 
 
+## Writing derived layers
+
+We can also write derived layers back to our cloud storage system where they can be used in other workflows. 
+Note that not all formats that support VSI reads also support VSI writes (see `st_drivers("all")`). 
+VSI writes to `tif` files require an additional environmental variable:
+
+```{r}
+Sys.setenv("CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE"="YES") 
+```
+
+We can then write directly to bucket storage (assuming we have configured AWS tokens which were granted write privileges)
+
+```{r}
+climate_resilience |> 
+  write_stars("/vsis3/public-biodiversity/ace_summary/climate-resilience.tif")
+```
+
+In certain cases it may be necessary to write first to local storage and then copy data over to the bucket system. For instance, `gdalcubes` can stream a given virtual cube into a collections of many constituent COG assets, including 'overview' files, but at present this only works with a local directory.  A S3 client like `aws-cli` or `minio` R package can be used for bulk copies between local directories and the object store.
+
+```{r eval=FALSE}
+library(minio) # install_github("cboettig/minio")
+mc("cp -r local_dir minio/bucket-name/path")
+```
+
+
+## Creating new STAC Catalog Entries
+
+In addition to writing out a derived layer, we may want to create a metadata entry which will add the resulting product to the data.  We can also write new entries for data products which can already be found on other portals.  A stac catalog entry is a simple JSON file which conforms to the [STAC spec](https://stacspec.org/en/about/stac-spec/), and can be generated programmatically or merely written out manually.  See the JSON files in the [DSE Biodiversity Catalog on GitHub](https://github.com/SchmidtDSE/biodiversity-catalog/tree/main/stac/v1/collections) for examples.  Simply commit new JSON files to the GitHub repository and link them from the top-level [catalog.json](https://github.com/SchmidtDSE/biodiversity-catalog/blob/main/stac/v1/catalog.json) or appropriate sub-catalog to add them.  

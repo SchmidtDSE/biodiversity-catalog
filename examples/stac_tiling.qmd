@@ -2,6 +2,11 @@
 title: Stac Tiling
 ---
 
+
+```{r include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
 # R
 
 Here we compute NDVI from sentinel2 over arbitrary data cube:

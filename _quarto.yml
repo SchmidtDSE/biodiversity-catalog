@@ -28,9 +28,9 @@ website:
         contents:
           - text: Cloud Basics
             href: examples/cloud-basics.qmd
-          - text: STAC Search
-            href: examples/stac_search.qmd
+#          - text: STAC Search
+#            href: examples/stac_search.qmd
           - text: STAC Tiling
             href: examples/stac_tiling.qmd
-          - text: Optimizing formats
-            href: examples/ace.qmd
+          - text: Publishing Data
+            href: examples/publish.qmd

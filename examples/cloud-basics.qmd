@@ -61,7 +61,7 @@ plot(r_cropped)
 
 ### gdalcubes
 
-`gdalcubes` is most powerful in working with large numbers of individual raster assets that are to be combined into a space-time "data cube".  However, it works very nicely even with a single or small collection of rasters as a high-level interface for lazy reads, including cropping, coordinate transforms, and upscaling or downscaling spatial sampling.  The following is substantially faster than the alternative methods.  
+`gdalcubes` is most powerful in working with large numbers of individual raster assets that are to be combined into a space-time "data cube".  However, it works very nicely even with a single or small collection of rasters as a high-level interface for lazy reads, including cropping, coordinate transforms, and upscaling or downscaling spatial sampling.  This approach is also substantially faster than the alternative methods for remote subsetting and lazy eval analysis.  See the entry on [stac tiling](stac_tiling.html) for more details. 
 
 ```{r}
 box <- st_bbox(india)
@@ -79,7 +79,7 @@ Like `terra` and `stars`, gdalcubes includes a variety of functions for pixel-ba
 
 ### Write operations
 
-In many spatial workflows it desirable to write out intermediate or final products to files that can be rendered for visualization or consumed by other software or workflows.  Just as we can read directly from our S3 cloud storage systems, we can also write our outputs back to them.  (Note that not all gdal drivers supporting VSI reads support VSI writes.)
+In many spatial workflows it desirable to write out intermediate or final products to files that can be rendered for visualization or consumed by other software or workflows.  Just as we can read directly from our S3 cloud storage systems, we can also write our outputs back to them.  See the entry on [Publishing Data](publish.html) for details.  
 
 ## Vectors
 
