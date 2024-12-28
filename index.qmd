@@ -34,7 +34,7 @@ We can then read in raster or vector files using the GDAL virtual filesystem (VF
 ```{python}
 import rioxarray
 
-vfs_url = "/vsis3/public-biodiversity/carbon/Irrecoverable_Carbon_2018/Irrecoverable_C_Total_2018.tif"
+vfs_url = "/vsis3/public-biodiversity/carbon/cogs/irrecoverable_c_total_2018.tif"
 
 r = rioxarray.open_rasterio(vfs_url)
 ```
@@ -52,7 +52,7 @@ Sys.setenv("AWS_VIRTUAL_HOSTING"="FALSE")
 
 ```{r}
 library(terra)
-vfs_url = "/vsis3/public-biodiversity/carbon/Irrecoverable_Carbon_2018/Irrecoverable_C_Total_2018.tif"
+vfs_url = "/vsis3/public-biodiversity/carbon/cogs/irrecoverable_c_total_2018.tif"
 r = rast(vfs_url)
 ```
 
