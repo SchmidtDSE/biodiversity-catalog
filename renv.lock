@@ -1500,24 +1500,9 @@
     },
     "rstac": {
       "Package": "rstac",
-      "Version": "0.9.2",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "rstac",
-      "RemoteUsername": "OldLipe",
-      "RemoteRef": "b-0.9.1",
-      "RemoteSha": "8436c5fd065cb6f0e6347483ba72ceacac130dee",
-      "Requirements": [
-        "R",
-        "crayon",
-        "httr",
-        "jsonlite",
-        "lifecycle",
-        "magrittr",
-        "utils"
-      ],
-      "Hash": "870433e8693f5c735253af9cca056281"
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
     },
     "rstudioapi": {
       "Package": "rstudioapi",
