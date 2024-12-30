@@ -33,7 +33,7 @@ items <- list(
   "type"= "Feature",
   "collection" = "cdfw_ace",
   "title"= "California Department of Fish and Wildlife (CDFW) Areas of Conservation Emphasis (ACE)",
-  "description" = "Dataset URLs"
+  "description" = "Dataset URLs",
   "links"= list(
      list(
       "rel"= "collection",
