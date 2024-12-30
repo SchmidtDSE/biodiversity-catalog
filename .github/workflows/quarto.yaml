@@ -22,8 +22,6 @@ jobs:
           r-version: '4.4' # The R version to download (if necessary) and use.
 
       - uses: r-lib/actions/setup-renv@v2
-        with:
-          cache-version: 1
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
