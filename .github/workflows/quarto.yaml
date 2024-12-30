@@ -8,6 +8,7 @@ name: Quarto Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    container: ghcr.io/boettiger-lab/k8s:latest
     permissions:
       contents: write
     steps:
