@@ -8,15 +8,13 @@ name: Quarto Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    container: 
-      image: ghcr.io/boettiger-lab/k8s
-      options: --user root
+#    container: 
+#      image: ghcr.io/boettiger-lab/k8s
+#      options: --user root
     permissions:
       contents: write
     steps:
-      - run: git config --system --add safe.directory '*'
+#      - run: git config --system --add safe.directory '*'
       - name: Check out repository
         uses: actions/checkout@v4
         
