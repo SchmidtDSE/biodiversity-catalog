@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/SchmidtDSE/biodiversity-catalog/biodiversity-datasets.html</loc>
-    <lastmod>2023-06-19T19:35:41.268Z</lastmod>
+    <loc>https://SchmidtDSE.github.io/biodiversity-catalog/index.html</loc>
+    <lastmod>2024-12-31T22:46:16.494Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/SchmidtDSE/biodiversity-catalog/examples/stac_tiling.html</loc>
-    <lastmod>2023-06-19T19:35:42.340Z</lastmod>
+    <loc>https://SchmidtDSE.github.io/biodiversity-catalog/examples/publish.html</loc>
+    <lastmod>2024-12-31T22:46:16.494Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/SchmidtDSE/biodiversity-catalog/examples/cloud-basics.html</loc>
-    <lastmod>2023-06-19T19:35:43.024Z</lastmod>
+    <loc>https://SchmidtDSE.github.io/biodiversity-catalog/examples/cloud-basics.html</loc>
+    <lastmod>2024-12-31T22:46:16.494Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/SchmidtDSE/biodiversity-catalog/examples/publish.html</loc>
-    <lastmod>2023-06-19T19:35:43.620Z</lastmod>
+    <loc>https://SchmidtDSE.github.io/biodiversity-catalog/examples/stac_search.html</loc>
+    <lastmod>2024-12-31T22:46:16.494Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/SchmidtDSE/biodiversity-catalog/examples/stac_search.html</loc>
-    <lastmod>2023-06-19T19:35:44.088Z</lastmod>
+    <loc>https://SchmidtDSE.github.io/biodiversity-catalog/examples/stac_tiling.html</loc>
+    <lastmod>2024-12-31T22:46:16.494Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/SchmidtDSE/biodiversity-catalog/index.html</loc>
-    <lastmod>2023-06-19T19:35:44.708Z</lastmod>
+    <loc>https://SchmidtDSE.github.io/biodiversity-catalog/biodiversity-datasets.html</loc>
+    <lastmod>2024-12-31T22:46:16.494Z</lastmod>
   </url>
 </urlset>

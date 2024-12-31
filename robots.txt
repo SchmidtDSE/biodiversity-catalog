@@ -1,1 +1,1 @@
-Sitemap: https://github.com/SchmidtDSE/biodiversity-catalog/sitemap.xml
+Sitemap: https://SchmidtDSE.github.io/biodiversity-catalog/sitemap.xml
