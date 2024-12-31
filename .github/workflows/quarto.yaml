@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    container: ghcr.io/boettiger-lab/k8s
+    container: 
+      image: ghcr.io/boettiger-lab/k8s
+      options: --user root
     permissions:
       contents: write
     steps:
